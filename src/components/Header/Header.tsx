@@ -1,5 +1,5 @@
 import { Box, List, ListItem, MenuItem, MenuList, Typography } from '@mui/material'
-import i18next from 'i18next'
+import i18next, { t } from 'i18next'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
@@ -92,7 +92,7 @@ const Header = (props: Props) => {
   return (
     <>
       <Box>
-        <Typography variant='h4'  />
+        <Typography variant='h4' children={t('')} />
       </Box>
       {/* <UpperHeader /> */}
       {/* <NavBar /> */}
