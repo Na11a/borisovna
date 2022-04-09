@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
-import { Box, List, ListItem, MenuItem, MenuList, Typography } from "@mui/material";
 
 import { MainLayout } from '../../'
+import { Title } from '../../Title'
 
 const EDRPOU = "38368563"
 const BANK_ACCOUNT = "UA963052990000026004011602838"
@@ -24,14 +24,7 @@ export const PaymentDetails = () => {
 
   return (
     <MainLayout>
-      <div>
-        <Typography variant="h4" textAlign='center' sx={{ color: '#045739' }}>
-          {TITLE}
-        </Typography>
-        <Typography textAlign='center' variant="h4" sx={{ color: '#F55F5F' }}>
-          {NAME}
-        </Typography>
-      </div>
+      <Title title={TITLE} name={NAME}/>
       <div>
         <div>
           {ADDRESS_TITLE}
