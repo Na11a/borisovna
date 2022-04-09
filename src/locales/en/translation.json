@@ -50,6 +50,18 @@
             "14": "Organization of recreation, rehabilitation, psychological and material support for children, participants in the Revolution of Dignity, Anti-terrorist Operation, Operation of United Forces and war actions caused by Russian aggression."
         }
     },
+    "PAYMENT_DETAILS_PAGE": {
+        "description": "Bank details of \"Dakhnivska Sich\" charity foundation",
+        "items": {
+            "ADDRESS_TITLE": "Legal address",
+            "ADDRESS_CONTENT": "Ukraine, 18035, Cherkasy, 2-ho Ukrains'koho Frontu Street, 106",
+            "ACCOUNT_TITLE": "Account in hryvnia",
+            "BANK_NAME_TITLE": "Recipient bank name",
+            "BANK_NAME_CONTENT": "JSC CB «PrivatBank»",
+            "SOME_WEIRD_TITLE": "EDRPOU of recipient"
+        }
+
+    },
     "pages": {
         "1": "Main",
         "2": "No main"
