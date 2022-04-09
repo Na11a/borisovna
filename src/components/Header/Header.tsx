@@ -3,6 +3,7 @@ import i18next, { t } from "i18next";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
+import MainLayout from "../Layout/MainLayout";
 
 type Props = {}
 const UpperHeader = () => {
@@ -90,11 +91,12 @@ const Menu = () => {
 
 const Header = (props: Props) => {
 	return (
-		<>
-			<Box>
-				<Typography variant="h4" children={t("")} />
+		<MainLayout>
+			<Box textAlign='center'>
+				<Typography variant="h4" sx={{ color: '#045739' }} children={t("subtitle")} />
+				<Typography variant="h4" sx={{ color: '#F55F5F' }} children={t('title')} />
 			</Box>
-		</>
+		</MainLayout>
 	);
 };
 export default Header;
