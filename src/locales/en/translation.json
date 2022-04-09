@@ -1,6 +1,9 @@
 {
     "title": "“DAKHNIVSKA SICH”",
     "subtitle": "CHARITABLE FOUNDATION",
+    "button": {
+        "Donate": "Donate"
+    },
     "description": "Local, voluntary, non-party, independent, charitable organization. Acts on the basis of legality, humanity, common interests and equality of rights of its participants in accordance with current legislation of Ukraine.",
     "address": "106, 2 Ukrainskoho Frontu St., 18000 Cherkasy, Ukraine",
     "FOUNDATIONS REQUISITES": {
@@ -61,7 +64,6 @@
             "BANK_NAME_CONTENT": "JSC CB «PrivatBank»",
             "SOME_WEIRD_TITLE": "EDRPOU of recipient"
         }
-
     },
     "pages": {
         "1": "Main",
