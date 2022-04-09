@@ -11,7 +11,6 @@ const style = {
   typography: "h4",
   textTransform: "uppercase",
   textAlign: "center",
-  // fontFamily: "Roboto",
   fontStyle: "normal",
   fontWeight: "900",
   fontSize: "32px",
