@@ -4,6 +4,17 @@
     "button": {
         "Donate": "Donate"
     },
+    "ourMission": {
+      "titleBlock":{
+        "title":"Our mission",
+        "description":"Promoting and providing financial, organizational, material, psychological, spiritual charitable assistance to those who need it"
+      },
+      "descriptionBlock":{
+        "subtitle":"FINANCIAL STATEMENTS",
+        "block1":"Financial activities are aimed at charity.",
+        "block2":"The Foundation does not receive or provide income from activities, and is not a profitable organization."
+      }
+    },
     "description": "Local, voluntary, non-party, independent, charitable organization. Acts on the basis of legality, humanity, common interests and equality of rights of its participants in accordance with current legislation of Ukraine.",
     "address": "106, 2 Ukrainskoho Frontu St., 18000 Cherkasy, Ukraine",
     "FOUNDATIONS REQUISITES": {
