@@ -2,18 +2,17 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 
 import { Header } from "..";
+import { pxToRem } from './../../styles/utils';
 
 interface IMainLayoutProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 const MainLayout = ({ children }: IMainLayoutProps) => {
-    return (
-        <Box sx={{ backgroundColor: '#232e7c', paddingX: "50px", margin: 0 }}>
-            <Header />
-            {children}
-        </Box>
-    );
+  return (
+    <Box sx={{ paddingX: pxToRem(20), margin: 0 }}>
+    </Box>
+  );
 };
 
 export default MainLayout;
