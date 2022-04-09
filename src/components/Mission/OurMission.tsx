@@ -21,7 +21,7 @@ const OurMission = () => {
         <Typography sx={{
           fontWeight: '700',
           textTransform: 'uppercase'
-        }} children={`${descriptionBlock.title}:`} />
+        }} children={`${descriptionBlock.title}`} />
         <Typography children={descriptionBlock.block1} />
         <Typography children={descriptionBlock.block2} />
       </Box>
