@@ -1,43 +1,19 @@
-import MenuItem from "@mui/material/MenuItem/MenuItem";
-import Select from "@mui/material/Select/Select";
-import { Box } from "@mui/system";
-import React, { useContext } from "react";
-import { useParams } from "react-router";
-import { NavLink } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
+import * as React from "react";
+import Box from "@mui/material/Box";
 
-import { availableLanguages } from "utils/i18";
+import { Header } from "..";
 
-import styles from "./MainLayout.module.scss";
+interface IMainLayoutProps {
+    children: React.ReactNode;
+}
 
-type TMainLayoutProps = {
-  children: React.ReactNode;
+const MainLayout = ({ children }: IMainLayoutProps) => {
+    return (
+        <Box sx={{ backgroundColor: '#232e7c', paddingX: "50px", margin: 0 }}>
+            <Header />
+            {children}
+        </Box>
+    );
 };
-type TRoutes = {
-  name: string;
-};
 
-const routesEn: TRoutes[] = [{ name: "main" }];
-const routesUk: TRoutes[] = [{ name: "головна" }];
-const NavBar = (routes: TRoutes[]) => (
-  <>
-    {routes.map((route) => (
-      <NavLink className={({ isActive }) => (isActive ? "active" : "")} to="/">
-        {route.name}
-      </NavLink>
-    ))}
-  </>
-);
-
-const MainLayout = ({ children }: TMainLayoutProps) => {
-  const { t, i18n } = useTranslation();
-  return (
-    <>
-      <div>
-        {t("learnReact")}
-      </div>
-      
-    </>
-  );
-};
 export default MainLayout;

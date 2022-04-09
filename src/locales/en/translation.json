@@ -1,0 +1,56 @@
+{
+    "title": "CHARITABLE FOUNDATION “DAKHNIVSKA SICH”",
+    "description": "Local, voluntary, non-party, independent, charitable organization. Acts on the basis of legality, humanity, common interests and equality of rights of its participants in accordance with current legislation of Ukraine.",
+    "address": "106, 2 Ukrainskoho Frontu St., 18000 Cherkasy, Ukraine",
+    "FOUNDATIONS REQUISITES": {
+        "1": "EDRPOU (National State Registry of Ukrainian Enterprises and Organizations) 38368563",
+        "2": "Bank Account UA 963052990000026004011602838 in “АТ КБ «ПРИВАТБАНК»” (Joint-Stock Company, Commercial Bank “PRIVATBANK”"
+    },
+    "LEGISLATIVE BASIS": {
+        "1": "The charitable foundation operates on the basis of the Charter",
+        "2": "In its work the foundation is guided by the Law of Ukraine “On Charity and Charitable Organizations”, the Constitution of Ukraine and other legislative acts and laws of Ukraine."
+    },
+    "GEOGRAPHY OF ACTIVITY": "The Foundation’s activities are spread in the Cherkasy region",
+    "FINANCIAL STATEMENTS": {
+        "1": "Financial activities are aimed at charity.",
+        "2": "The Foundation does not receive or provide income from activities, and is not a profitable organization."
+    },
+    "FOUNDATION COOPERATION": "The Foundation cooperates with religious denominations, legislative and executive bodies, local governments, institutions, educational, scientific and cultural institutions, health care, sports and tourism, other collective, public and private public institutions, enterprises and organizations, regardless of their organizational subordination, legal form and industry affiliation, as well as foreign organizations and citizens of Ukraine and other countries",
+    "INTERNATIONAL ACIVITY": {
+        "1": "International charitable activities are carried out through participation in international charitable projects, participation in the work of international charitable organizations, as well as in other forms that do not contradict the legislation of Ukraine and the norms and principles of international law",
+        "2": "Cooperation with foreign companies, organizations, enterprises and citizens to carry out charitable activities and provide charitable assistance."
+    },
+    "PURPOSE AND DIRECTIONS OF THE FOUNDATION": {
+        "1": "Promoting and providing financial, organizational, material, psychological, spiritual charitable assistance to those who need it",
+        "2": "Assistance to the disabled, orphans, large families, vulnerable groups, children whose parents were participants in the Revolution of Dignity, Anti-terrorist Operation, Operation of United Forces and Russian military aggression",
+        "3": "Providing development assistance to talented and creative children and youth.",
+        "4": "Providing assistance in the development of publishing, media, information infrastructure.",
+        "5": "Patriotic and ecological education of children and youth.",
+        "6": "Promoting health, mass physical culture and sports.",
+        "7": "Promotion of health and recreation of children, youth and family recreation and rehabilitation.",
+        "8": "Promoting a healthy lifestyle. "
+    },
+    "GOOD DEEDS": {
+        "description": "Providing territory for children's festivals, competitions, contests, camps.",
+        "items": {
+            "1": "City creative festival of student youth “We are from a Cossack Family”.",
+            "2": "City and regional competitions of the All-Ukrainian children's and youth military-patriotic game “Sokil (Falcon)” (“Jura”).",
+            "3": "Regional patriotic training “Cossack State”.",
+            "4": "Literary festival “Kalavurnia”.",
+            "5": "KVN Student Team Festival.",
+            "6": "Festival of Sports and Health in honour of Ivan Piddubny.",
+            "7": "Funding of school sports teams to participate in regional and All-Ukrainian competitions.",
+            "8": "Financing the participation of creatively gifted youth in seminars, workshops and forums on self-development.",
+            "9": "Awarding of creative children’s groups of the city on the results of work during the year.",
+            "10": "Providing accommodation, food and training conditions for sports clubs from the temporarily occupied territories (Donetsk and Luhansk regions)",
+            "11": "Organization and provision of accommodation and meals for internally displaced persons.",
+            "12": "Providing territory and providing conditions for training of armed forces units of the Armed Forces of Ukraine and participants of territorial defence.",
+            "13": "Establishment of reception and sorting points for volunteer assistance for internally displaced persons and the needs of the city’s territorial defence.",
+            "14": "Organization of recreation, rehabilitation, psychological and material support for children, participants in the Revolution of Dignity, Anti-terrorist Operation, Operation of United Forces and war actions caused by Russian aggression."
+        }
+    },
+    "pages": {
+        "1": "Main",
+        "2":"No main"
+    }
+}
