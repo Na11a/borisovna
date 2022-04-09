@@ -54,8 +54,9 @@
         }
     },
     "PAYMENT_DETAILS_PAGE": {
-        "description": "Bank details of \"Dakhnivska Sich\" charity foundation",
-        "items": {
+        "TITLE": "Bank details of charity foundation",
+        "NAME": "Dakhnivska Sich",
+        "CONTENT": {
             "ADDRESS_TITLE": "Legal address",
             "ADDRESS_CONTENT": "Ukraine, 18035, Cherkasy, 2-ho Ukrains'koho Frontu Street, 106",
             "ACCOUNT_TITLE": "Account in hryvnia",
