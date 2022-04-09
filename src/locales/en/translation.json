@@ -1,5 +1,6 @@
 {
-    "title": "CHARITABLE FOUNDATION “DAKHNIVSKA SICH”",
+    "title": "“DAKHNIVSKA SICH”",
+    "subtitle": "CHARITABLE FOUNDATION",
     "description": "Local, voluntary, non-party, independent, charitable organization. Acts on the basis of legality, humanity, common interests and equality of rights of its participants in accordance with current legislation of Ukraine.",
     "address": "106, 2 Ukrainskoho Frontu St., 18000 Cherkasy, Ukraine",
     "FOUNDATIONS REQUISITES": {
@@ -51,6 +52,6 @@
     },
     "pages": {
         "1": "Main",
-        "2":"No main"
+        "2": "No main"
     }
 }
