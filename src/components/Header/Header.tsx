@@ -5,7 +5,10 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { pxToRem } from "../../styles/utils";
 import MainLayout from "../Layout/MainLayout";
+import { Title } from "../Title";
 import DonateButton from './../Buttons/Donate';
+import BlockContainer from './../Layout/BlockContainer';
+
 
 type Props = {}
 const UpperHeader = () => {
@@ -93,20 +96,16 @@ const Header = () => {
   const { t } = useTranslation();
   const defaultMargin = pxToRem(20)
   return (
-    <MainLayout >
-      <Box display='flex' flexWrap='wrap' justifyContent='center' alignItems="center">
-        <Box marginBottom={defaultMargin}>
-          <Typography variant="h4" textAlign='center' sx={{ color: '#045739' }} children={t("subtitle")} />
-          <Typography textAlign='center' variant="h4" sx={{ color: '#F55F5F' }} children={t('title')} />
-        </Box>
-        <Box component='img' src='./images/photo-for-banner.png' marginBottom={defaultMargin} />
-        <Typography textAlign="left" color="black" fontWeight="400" marginBottom={defaultMargin}>
-          {t('description')}
-        </Typography>
-        <DonateButton />
+    <BlockContainer >
+      <Box marginBottom={defaultMargin}>
+        <Title subTitle={t("subtitle")} name={t('title')} />
       </Box>
-
-    </MainLayout>
+      <Box component='img' src='./images/photo-for-banner.png' marginBottom={defaultMargin} />
+      <Typography textAlign="left" color="black" fontWeight="400" marginBottom={defaultMargin}>
+        {t('description')}
+      </Typography>
+      <DonateButton />
+    </BlockContainer >
   );
 };
 export default Header;
