@@ -58,7 +58,6 @@ const NavBar = () => (
 );
 
 const Menu = () => {
-	const { t } = useTranslation();
 
 	return (
 		<List style={{ display: "flex" }}>
@@ -89,7 +88,8 @@ const Menu = () => {
 	);
 };
 
-const Header = (props: Props) => {
+const Header = () => {
+	const { t } = useTranslation();
 	return (
 		<MainLayout>
 			<Box textAlign='center'>
