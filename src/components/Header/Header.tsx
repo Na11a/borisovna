@@ -3,6 +3,7 @@ import i18next, { t } from "i18next";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
+import { pxToRem } from "../../styles/utils";
 import MainLayout from "../Layout/MainLayout";
 
 type Props = {}
@@ -91,11 +92,18 @@ const Menu = () => {
 const Header = () => {
 	const { t } = useTranslation();
 	return (
-		<MainLayout>
-			<Box textAlign='center'>
-				<Typography variant="h4" sx={{ color: '#045739' }} children={t("subtitle")} />
-				<Typography variant="h4" sx={{ color: '#F55F5F' }} children={t('title')} />
+		<MainLayout >
+			<Box textAlign='center' >
+				<Box paddingBottom={pxToRem(20)}>
+					<Typography variant="h4" sx={{ color: '#045739' }} children={t("subtitle")} />
+					<Typography variant="h4" sx={{ color: '#F55F5F' }} children={t('title')} />
+				</Box>
+				<Box component='img' src='./images/photo-for-banner.png' paddingBottom={pxToRem(20)} />
+				<Box textAlign="left" color="black" fontWeight="400">
+					{t('description')}
+				</Box>
 			</Box>
+
 		</MainLayout>
 	);
 };
