@@ -1,27 +1,24 @@
 import { Typography } from "@mui/material";
 
 interface TitleProps {
-  title: string,
+  subTitle: string,
   name: string
 }
 
-const titleStyle = {
+const style = {
+  typography: "h4",
+
   fontWeight: "bold",
   textTransform: "uppercase",
-  color: "#045739"
+  textAlign: "center",
 }
 
-const nameStyle = { 
-  textTransform: "uppercase",
-  color: '#F55F5F' 
-}
-
-export const Title = ({ title, name }: TitleProps) => (
+export const Title = ({ subTitle, name }: TitleProps) => (
   <>
-    <Typography textAlign="center" variant="h4" sx={titleStyle}>
-      {title}
+    <Typography sx={{ ...style, color: "#045739" }}>
+      {subTitle}
     </Typography>
-    <Typography textAlign="center" variant="h4" sx={nameStyle}>
+    <Typography  sx={{ ...style, color: "#F55F5F" }}>
       {name}
     </Typography>
   </>

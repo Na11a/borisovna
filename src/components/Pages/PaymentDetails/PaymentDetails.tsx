@@ -24,7 +24,7 @@ export const PaymentDetails = () => {
 
   return (
     <MainLayout>
-      <Title title={TITLE} name={NAME}/>
+      <Title subTitle={TITLE} name={NAME}/>
       <div>
         <div>
           {ADDRESS_TITLE}
