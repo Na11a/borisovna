@@ -1,7 +1,9 @@
-import { useTranslation } from 'react-i18next'
+import { Box } from "@mui/material"
+import { useTranslation } from "react-i18next"
 
-import { MainLayout } from '../../'
-import { Title } from '../../Title'
+import { BlockContainer, MainLayout } from "../../"
+import { Title } from "../../Title"
+import { TextWithLabel, TextWithLabelAndCopy } from "./TextWithLabel"
 
 const EDRPOU = "38368563"
 const BANK_ACCOUNT = "UA963052990000026004011602838"
@@ -9,7 +11,7 @@ const BANK_ACCOUNT = "UA963052990000026004011602838"
 export const PaymentDetails = () => {
   const { t } = useTranslation()
   
-  const { 
+  const {
     TITLE,
     NAME,
     CONTENT: {
@@ -24,25 +26,23 @@ export const PaymentDetails = () => {
 
   return (
     <MainLayout>
-      <Title subTitle={TITLE} name={NAME}/>
-      <div>
-        <div>
-          {ADDRESS_TITLE}
-          {ADDRESS_CONTENT}
-        </div>
-        <div>
-          {ACCOUNT_TITLE}
-          {BANK_ACCOUNT}
-        </div>
-        <div>
-          {BANK_NAME_TITLE}
-          {BANK_NAME_CONTENT}
-        </div>
-        <div>
-          {SOME_WEIRD_TITLE}
-          {EDRPOU}
-        </div>
-      </div>
+      <BlockContainer direction="column">
+        <Title subTitle={TITLE} name={NAME}/>
+        <Box sx={dataContainerStyle}>
+          <TextWithLabel label={ADDRESS_TITLE} text={ADDRESS_CONTENT}/>
+          <TextWithLabelAndCopy label={ACCOUNT_TITLE} text={BANK_ACCOUNT}/>
+          <TextWithLabel label={BANK_NAME_TITLE} text={BANK_NAME_CONTENT}/>
+          <TextWithLabelAndCopy label={SOME_WEIRD_TITLE} text={EDRPOU}/>
+        </Box>
+      </BlockContainer>
     </MainLayout>
   )
+}
+
+const dataContainerStyle = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  gap: "30px",
+  marginTop: "40px"
 }

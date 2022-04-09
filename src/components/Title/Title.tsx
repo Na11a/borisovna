@@ -9,9 +9,13 @@ interface TitleProps {
 
 const style = {
   typography: "h4",
-  fontWeight: "bold",
   textTransform: "uppercase",
   textAlign: "center",
+  // fontFamily: "Roboto",
+  fontStyle: "normal",
+  fontWeight: "900",
+  fontSize: "32px",
+  lineHeight: "120%",
 }
 
 export const Title = ({ subTitle, name }: TitleProps) => (

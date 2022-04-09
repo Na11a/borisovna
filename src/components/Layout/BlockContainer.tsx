@@ -1,11 +1,16 @@
 import Box from '@mui/system/Box/Box'
-import React from 'react'
+import { FlexboxProps } from "@mui/system"
+import { ReactNode } from 'react'
 import { pxToRem } from '../../styles/utils'
 
+interface IBlockContainerProps {
+  direction?: FlexboxProps["flexDirection"],
+  children: ReactNode
+}
 
-const BlockContainer = ({ children }: { children: React.ReactNode }) => {
+const BlockContainer = ({ direction, children }: IBlockContainerProps) => {
   return (
-    <Box display='flex' justifyContent='center' flexWrap='wrap' alignItems='center' marginBottom={pxToRem(60)}>
+    <Box display='flex' flexDirection={direction || 'row'} justifyContent='center' flexWrap='wrap' alignItems='center' marginBottom={pxToRem(60)}>
       {children}
     </Box>
   )
