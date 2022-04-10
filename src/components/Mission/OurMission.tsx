@@ -18,13 +18,14 @@ const OurMission = () => {
       <Box flex='100%'>
         <Title name={t('ourMission.titleBlock.title')} />
       </Box>
-      <Typography flex='50%' textAlign='left' children={t('ourMission.titleBlock.description')} />
+      <Typography flex='50%' textAlign='left' mb={defaultBlockMargin} children={t('ourMission.titleBlock.description')} />
       <Box component='img' borderRadius='50%' src='./images/our-mission.png' marginBottom={defaultBlockMargin} />
       <Box textAlign='left'>
         <Typography sx={{
           fontWeight: '700',
           textTransform: 'uppercase'
-        }} children={t('ourMission.descriptionBlock.title')} />
+        }} 
+        children={t('ourMission.descriptionBlock.title')} />
         <Typography children={t('ourMission.descriptionBlock.block1')} />
         <Typography children={t('ourMission.descriptionBlock.block2')} />
       </Box>

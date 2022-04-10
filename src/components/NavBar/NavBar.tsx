@@ -8,6 +8,7 @@ const LanguageSelector = () => {
   const [language, setLanguage] = useState(i18next.language)
   const handleChangeLanguage = (event: SelectChangeEvent<string>) => {
     i18next.changeLanguage(event.target.value);
+    localStorage.setItem('language', event.target.value)
     setLanguage(event.target.value)
   };
   return (
@@ -22,13 +23,17 @@ interface INavBarProps {
 }
 const NavBar = ({ handleOpenMenu }: INavBarProps) => {
   return (
-    <Box display='flex'
+    <Box
+
+      display='flex'
       alignItems='center'
       justifyContent='space-between'
       sx={{
         boxSizing: 'border-box',
-        height: '80px',
-        width: '100vw',
+        position: 'fixed',
+        top: '0',
+        height: pxToRem(80),
+        width: '100%',
         boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
         marginBottom: pxToRem(20),
         paddingX: pxToRem(20)

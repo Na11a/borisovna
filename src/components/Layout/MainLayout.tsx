@@ -10,7 +10,7 @@ interface IMainLayoutProps {
 
 const MainLayout = ({ children }: IMainLayoutProps) => {
   return (
-    <Box sx={{ paddingX: pxToRem(20), margin: 0 }}>
+    <Box sx={{ paddingTop: pxToRem(80), paddingX: pxToRem(20), margin: 0 }}>
       {children}
     </Box>
   );
