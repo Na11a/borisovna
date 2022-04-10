@@ -29,7 +29,8 @@ const ListItemContainer = ({ value, closeMenu, isActive, anchor }: IListItemCont
           fontSize: '20px',
           fontWeight: '400',
           borderRadius: pxToRem(30),
-          border: isActive ? '1px solid red' : 'none'
+          border: isActive ? '1px solid' : '0px',  
+          borderColor:'secondary.main'
         }}
         textAlign='center'
       >
