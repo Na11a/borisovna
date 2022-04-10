@@ -35,10 +35,12 @@ const cardItemStyle = {
   margin: '0 20px',
 }
 
+
 type ICooperationProps = {
   setActiveBlock: React.Dispatch<React.SetStateAction<string>>
 }
 const Cooperation = ({ setActiveBlock }: ICooperationProps) => {
+  
   const { t } = useTranslation()
 
   return (
@@ -62,4 +64,6 @@ const Cooperation = ({ setActiveBlock }: ICooperationProps) => {
     </BlockContainer>
   )
 }
+
 export default Cooperation;
+
