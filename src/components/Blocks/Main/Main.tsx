@@ -1,5 +1,5 @@
-import { Container, Typography } from "@mui/material"
-import React                     from "react"
+import { Box, Container, Typography } from "@mui/material"
+import React                          from "react"
 import { useTranslation }        from "react-i18next"
 import { Title }                 from "../../Title"
 import DonateButton              from '../../Buttons/Donate'
@@ -16,14 +16,14 @@ const Main = ({ setActiveBlock }: IHeaderProps) => {
   const { t } = useTranslation()
   return (
     <BlockContainer setActiveAnchor={ setActiveBlock } anchor={ anchor }>
-      <Container>
+      <Box>
         <Title anchor={ anchor }
                variant="primary"
                subTitle={ t("subtitle") }
                name={ t('title') }/>
-      </Container>
+      </Box>
 
-      <Container component="img" src="./images/photo-for-banner.png"/>
+      <Box component="img" src="./images/photo-for-banner.png"/>
 
       <Container>
         <Typography variant="h6" textAlign="left" color="black">

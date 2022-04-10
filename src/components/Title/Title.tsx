@@ -1,5 +1,5 @@
-import { Container, Typography } from "@mui/material"
-import { TAnchor }               from "../../types/types"
+import { Box, Container, Typography } from "@mui/material"
+import { TAnchor }                    from "../../types/types"
 import { pxToRem }               from './../../styles/utils'
 
 type TVariant = "primary" | "secondary"
@@ -28,7 +28,7 @@ const secondaryStyle = {
 }
 
 export const Title = ({ subTitle, name, variant, anchor }: TitleProps) => (
-  <Container sx={ { marginBottom: pxToRem(20) } }>
+  <Box sx={ { marginBottom: pxToRem(20) } }>
     <Typography variant="h5" id={ anchor } sx={ {
       ...(variant === 'primary' ? primaryStyle : secondaryStyle),
       color: "primary.main",
@@ -41,5 +41,5 @@ export const Title = ({ subTitle, name, variant, anchor }: TitleProps) => (
     } }>
       { name }
     </Typography>
-  </Container>
+  </Box>
 )

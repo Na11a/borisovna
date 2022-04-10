@@ -1,7 +1,7 @@
 import * as React from "react"
-import { pxToRem } from './../../styles/utils'
-import { Container } from '@mui/material'
-import { Header } from "..";
+import { pxToRem }        from './../../styles/utils'
+import { Box, Container } from '@mui/material'
+import { Header }         from "..";
 import { Menu } from './../'
 import { flexbox } from "@mui/system";
 interface IMainLayoutProps {
@@ -21,7 +21,7 @@ const MainLayout = ({ children, activeBlock }: IMainLayoutProps) => {
   return (
     <>
       {!isOpenMenu ?
-        <Container sx={{
+        <Box sx={{
           minWidth:'100vw',
           margin: 0, 
           marginTop: pxToRem(100), 
@@ -32,7 +32,7 @@ const MainLayout = ({ children, activeBlock }: IMainLayoutProps) => {
         }}>
           <Header openMenu={openMenu} />
           {children}
-        </Container> :
+        </Box> :
         <Menu closeMenu={closeMenu} activeBlock={activeBlock} />}
     </>
   )

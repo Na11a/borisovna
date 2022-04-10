@@ -1,7 +1,7 @@
 import React                     from 'react'
-import { Title }                         from '../../Title'
-import { Container, styled, Typography } from '@mui/material'
-import BlockContainer                    from '../../Layout/BlockContainer'
+import { Title }                              from '../../Title'
+import { Box, Container, styled, Typography } from '@mui/material'
+import BlockContainer                         from '../../Layout/BlockContainer'
 import { defaultBlockMargin }    from '../../../styles/utils'
 import { useTranslation }        from 'react-i18next'
 
@@ -15,25 +15,25 @@ const OurMission = ({ setActiveBlock }: IOurMissionProps) => {
   const Img = styled("img")({})
   return (
     <BlockContainer setActiveAnchor={ setActiveBlock } anchor={ 'our-mission' }>
-      <Container>
+      <Box>
         <Title anchor={ 'our-mission' }
                variant="secondary"
                name={ t('ourMission.titleBlock.title') }/>
-      </Container>
+      </Box>
       <Typography variant="h6"
                   textAlign="left"
                   mb={ defaultBlockMargin }
                   children={ t('ourMission.titleBlock.description') }/>
-      <Container sx={ {display:'flex',justifyContent:'center', } }>
+      <Box sx={ {display:'flex',justifyContent:'center', } }>
         <Img src="./images/our-mission.png" alt=" photo" sx={{borderRadius:'50%'}}/>
-      </Container>
-      <Container sx={ { textAlign: 'left' } }>
+      </Box>
+      <Box sx={ { textAlign: 'left' } }>
         <Typography  variant='h6' fontWeight='700' sx={ {
           textTransform: 'uppercase',
         } } children={ t('ourMission.descriptionBlock.title') }/>
         <Typography variant='h6' children={ t('ourMission.descriptionBlock.block1') }/>
         <Typography variant='h6' children={ t('ourMission.descriptionBlock.block2') }/>
-      </Container>
+      </Box>
     </BlockContainer>
   )
 }

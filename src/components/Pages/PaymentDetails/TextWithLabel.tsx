@@ -1,5 +1,5 @@
-import { Container, Typography } from "@mui/material"
-import ContentCopyIcon           from '@mui/icons-material/ContentCopy'
+import { Box, Container, Typography } from "@mui/material"
+import ContentCopyIcon                from '@mui/icons-material/ContentCopy'
 
 interface TextWithLabelProps {
   label: string,
@@ -12,7 +12,7 @@ interface TextWithLabelAndCopyProps extends TextWithLabelProps {
 }
 
 export const TextWithLabel = ({ label, text }: TextWithLabelProps) => (
-  <Container sx={ containerStyle }>
+  <Box sx={ containerStyle }>
     <Typography sx={ {
       ...fontStyle, textTransform: "uppercase", color: "#045739",
     } }>
@@ -21,7 +21,7 @@ export const TextWithLabel = ({ label, text }: TextWithLabelProps) => (
     <Typography sx={ { ...fontStyle, color: "#000000" } }>
       { text }
     </Typography>
-  </Container>
+  </Box>
 )
 
 export const TextWithLabelAndCopy = ({
@@ -36,19 +36,19 @@ export const TextWithLabelAndCopy = ({
   }
 
   return (
-    <Container sx={ containerStyle }>
+    <Box sx={ containerStyle }>
       <Typography sx={ {
         ...fontStyle, textTransform: "uppercase", color: "#045739",
       } }>
         { label }
       </Typography>
-      <Container sx={ clipboardTextContainerStyle }>
+      <Box sx={ clipboardTextContainerStyle }>
         <Typography sx={ { ...fontStyle, color: "#000000" } }>
           { text }
         </Typography>
         <ContentCopyIcon onClick={ handleCopy }/>
-      </Container>
-    </Container>
+      </Box>
+    </Box>
   )
 }
 

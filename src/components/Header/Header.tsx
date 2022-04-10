@@ -1,4 +1,5 @@
 import {
+  Box,
   Container, MenuItem, Select, SelectChangeEvent, Slide, useScrollTrigger,
 } from '@mui/material'
 import React, { ReactElement, useState } from 'react'
@@ -42,10 +43,10 @@ const HideOnScroll = ({ children }: { children: ReactElement }) => {
 const Header = ({ openMenu }: INavBarProps) => {
   return (
     <HideOnScroll>
-      <Container sx={{
+      <Box sx={{
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         boxSizing:'border-box',
         position: 'fixed',
         zIndex: 4,
@@ -56,12 +57,12 @@ const Header = ({ openMenu }: INavBarProps) => {
         width: '100%',
         boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
       }}>
-        <Container children="logo" />
-        <Container sx={{ display: 'flex', alignItems: 'center' }}>
-          <Container>
+        <Box children="logo" />
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Box>
             <LanguageSelector />
-          </Container>
-          <Container>
+          </Box>
+          <Box>
             <MenuIcon onClick={openMenu}
               sx={{
                 height: '30px',
@@ -70,9 +71,9 @@ const Header = ({ openMenu }: INavBarProps) => {
                   cursor: 'pointer',
                 },
               }} />
-          </Container>
-        </Container>
-      </Container>
+          </Box>
+        </Box>
+      </Box>
     </HideOnScroll>
   )
 }

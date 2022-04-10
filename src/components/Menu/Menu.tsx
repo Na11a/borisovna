@@ -1,5 +1,5 @@
-import { Container, List, ListItem, Typography } from '@mui/material'
-import React from 'react'
+import { Box, Container, List, ListItem, Typography } from '@mui/material'
+import React                                          from 'react'
 import { useTranslation } from 'react-i18next'
 import { HashLink as Link } from 'react-router-hash-link'
 import { pxToRem } from '../../styles/utils'
@@ -80,11 +80,11 @@ const Menu = ({ closeMenu, activeBlock }: IMenuItemProps) => {
           closeMenu={closeMenu}
           value={t('menu.legislativeBases')} />
       </List>
-      <Container sx={{
+      <Box sx={{
         marginTop: '60px', width: '100%', textAlign: 'center',
       }}>
         <DonateButton />
-      </Container>
+      </Box>
     </>
   )
 }

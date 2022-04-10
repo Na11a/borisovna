@@ -2,8 +2,8 @@ import { FlexboxProps }     from "@mui/system"
 import React, { ReactNode } from 'react'
 import { pxToRem }          from '../../styles/utils'
 import VisibilitySensor     from 'react-visibility-sensor'
-import { TAnchor }          from '../../types/types'
-import { Container }        from '@mui/material'
+import { TAnchor }        from '../../types/types'
+import { Box, Container } from '@mui/material'
 
 interface IBlockContainerProps {
   direction?: FlexboxProps["flexDirection"],
@@ -21,7 +21,7 @@ const BlockContainer = ({
 
       isVisible && setActiveAnchor(anchor)
     } }>
-      <Container sx={ {
+      <Box sx={ {
         display       : 'flex',
         flexDirection : direction || 'row',
         justifyContent: 'center',
@@ -30,7 +30,7 @@ const BlockContainer = ({
         marginBottom  : pxToRem(60),
       } }>
         { children }
-      </Container>
+      </Box>
     </VisibilitySensor>
   )
 }

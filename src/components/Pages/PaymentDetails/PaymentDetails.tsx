@@ -1,5 +1,5 @@
-import { Button, Container } from "@mui/material"
-import { useTranslation } from "react-i18next"
+import { Box, Button, Container } from "@mui/material"
+import { useTranslation }         from "react-i18next"
 import { useEffect, useState } from 'react'
 import { BlockContainer, MainLayout } from "../../"
 import { Title } from "../../Title"
@@ -54,7 +54,7 @@ export const PaymentDetails = ({ setActiveBlock, activeBlock }: IPaymentDetailsP
         <Title anchor={anchor}
           subTitle={t("PAYMENT_DETAILS_PAGE.TITLE")}
           name={t("PAYMENT_DETAILS_PAGE.NAME")} />
-        <Container sx={dataContainerStyle}>
+        <Box sx={dataContainerStyle}>
           <TextWithLabel label={t("PAYMENT_DETAILS_PAGE.CONTENT.ADDRESS_TITLE")}
             text={t("PAYMENT_DETAILS_PAGE.CONTENT.ADDRESS_CONTENT")} />
           <TextWithLabelAndCopy label={t("PAYMENT_DETAILS_PAGE.CONTENT.ACCOUNT_TITLE")}
@@ -65,7 +65,7 @@ export const PaymentDetails = ({ setActiveBlock, activeBlock }: IPaymentDetailsP
           <TextWithLabelAndCopy label={t("PAYMENT_DETAILS_PAGE.CONTENT.BANK_NAME_CONTENT")}
             text={EDRPOU}
             setIsCopy={setIsCopy} />
-        </Container>
+        </Box>
       </BlockContainer>
       <SuccessCopy isCopy={isCopy} />
     </MainLayout>

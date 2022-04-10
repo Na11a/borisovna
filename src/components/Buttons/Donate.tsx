@@ -11,8 +11,8 @@ const DonateButton = () => {
     <Button onClick={ () => navigate('/payment-details') }
             variant="contained"
             sx={ {
-              padding        : '10px 20px',
-              width          : { xs: '100%', md: '70%' },
+              padding        : '10px 10px',
+              width          : { xs: '95%', md: '70%' },
               borderRadius   : '20px',
               backgroundColor: 'primary',
               fontWeight     : '700',
