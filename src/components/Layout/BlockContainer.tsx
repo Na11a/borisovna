@@ -1,10 +1,9 @@
-import Box from '@mui/system/Box/Box'
-import { FlexboxProps } from "@mui/system"
-import { ReactNode } from 'react'
-import { pxToRem } from '../../styles/utils'
-import React from 'react'
-import VisibilitySensor from 'react-visibility-sensor';
-import { TAnchor } from '../../types/types'
+import { FlexboxProps }     from "@mui/system"
+import React, { ReactNode } from 'react'
+import { pxToRem }          from '../../styles/utils'
+import VisibilitySensor     from 'react-visibility-sensor'
+import { TAnchor }          from '../../types/types'
+import { Container }        from '@mui/material'
 
 interface IBlockContainerProps {
   direction?: FlexboxProps["flexDirection"],
@@ -13,21 +12,25 @@ interface IBlockContainerProps {
   setActiveAnchor: React.Dispatch<React.SetStateAction<string>>
 }
 
-const BlockContainer = ({ direction, children, setActiveAnchor, anchor }: IBlockContainerProps) => {
+const BlockContainer = ({
+  direction, children, setActiveAnchor, anchor,
+}: IBlockContainerProps) => {
 
   return (
-    <VisibilitySensor onChange={(isVisible) => {
-      
+    <VisibilitySensor onChange={ (isVisible) => {
+
       isVisible && setActiveAnchor(anchor)
-    }}>
-      <Box
-        display='flex'
-        flexDirection={direction || 'row'}
-        justifyContent='center' flexWrap='wrap'
-        alignItems='center'
-        marginBottom={pxToRem(60)}>
-        {children}
-      </Box>
+    } }>
+      <Container sx={ {
+        display       : 'flex',
+        flexDirection : direction || 'row',
+        justifyContent: 'center',
+        flexWrap      : 'wrap',
+        alignItems    : 'center',
+        marginBottom  : pxToRem(60),
+      } }>
+        { children }
+      </Container>
     </VisibilitySensor>
   )
 }

@@ -1,8 +1,6 @@
-import * as React from "react";
-import Box from "@mui/material/Box";
-
-import { Header } from "..";
-import { pxToRem } from './../../styles/utils';
+import * as React    from "react"
+import { pxToRem }   from './../../styles/utils'
+import { Container } from '@mui/material'
 
 interface IMainLayoutProps {
   children: React.ReactNode;
@@ -10,10 +8,12 @@ interface IMainLayoutProps {
 
 const MainLayout = ({ children }: IMainLayoutProps) => {
   return (
-    <Box sx={{ paddingTop: pxToRem(80), paddingX: pxToRem(20), margin: 0 }}>
-      {children}
-    </Box>
-  );
-};
+    <Container sx={ {
+      paddingTop: pxToRem(80), paddingX: pxToRem(20), margin: 0,
+    } }>
+      { children }
+    </Container>
+  )
+}
 
-export default MainLayout;
+export default MainLayout

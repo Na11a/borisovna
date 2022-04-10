@@ -1,16 +1,16 @@
-import React from 'react'
-import ChurchOutlinedIcon from '@mui/icons-material/ChurchOutlined'
+import React                  from 'react'
+import ChurchOutlinedIcon     from '@mui/icons-material/ChurchOutlined'
 import AccountBalanceOutlinedIcon
-  from '@mui/icons-material/AccountBalanceOutlined'
+                              from '@mui/icons-material/AccountBalanceOutlined'
 import AssuredWorkloadOutlinedIcon
-  from '@mui/icons-material/AssuredWorkloadOutlined'
-import ApartmentOutlinedIcon from '@mui/icons-material/ApartmentOutlined'
+                              from '@mui/icons-material/AssuredWorkloadOutlined'
+import ApartmentOutlinedIcon  from '@mui/icons-material/ApartmentOutlined'
 import FoundationOutlinedIcon from '@mui/icons-material/FoundationOutlined'
-import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline'
-import { useTranslation } from 'react-i18next'
-import { Title } from '../../Title'
-import { BlockContainer } from '../../index'
-import { Grid, Typography } from '@mui/material'
+import PeopleOutlineIcon      from '@mui/icons-material/PeopleOutline'
+import { useTranslation }     from 'react-i18next'
+import { Title }              from '../../Title'
+import { BlockContainer }     from '../../index'
+import { Grid, Typography }   from '@mui/material'
 
 const SECTION_NAME = "cooperation"
 
@@ -24,16 +24,16 @@ const icons = [
 ]
 
 const cardWrapperStyle = {
-  flexWrap: 'nowrap',
-  margin: '15px 0',
+  flexWrap  : 'nowrap',
+  margin    : '15px 0',
   alignItems: 'center',
-  boxShadow: "4px 4px 2px rgba(24, 85, 130, 0.1)",
+  boxShadow : "4px 4px 2px rgba(24, 85, 130, 0.1)",
 
 }
 const cardItemStyle = {
-  width: '70px',
+  width : '70px',
   height: '70px',
-  fill: '#045739',
+  fill  : '#045739',
   margin: '0 20px',
 
 }
@@ -47,26 +47,29 @@ const Cooperation = ({ setActiveBlock }: ICooperationProps) => {
   const { t } = useTranslation()
 
   return (
-    <BlockContainer setActiveAnchor={setActiveBlock} anchor='fund-cooperation'>
-      <Title anchor='fund-cooperation' name={t(`${SECTION_NAME}.title`)} />
+    <BlockContainer setActiveAnchor={ setActiveBlock }
+                    anchor="fund-cooperation">
+      <Title anchor="fund-cooperation" name={ t(`${ SECTION_NAME }.title`) }/>
 
       <Grid container direction="column">
 
-        {icons.map((Item, index) => (
-          <Grid container p={1} sx={cardWrapperStyle} key={index}>
+        { icons.map((Item, index) => (
+          <Grid container p={ 1 } sx={ cardWrapperStyle } key={ index }>
 
-            {<Item sx={{ ...cardItemStyle, order: `${index % 2 === 0 ? 1 : -1}` }} />}
+            { <Item sx={ {
+              ...cardItemStyle, order: `${ index % 2 === 0 ? 1 : -1 }`,
+            } }/> }
 
-            <Typography variant='h5' sx={{ flexGrow: 1, fontWeight: '500' }}>
-              {t(`${SECTION_NAME}.${index + 1}`)}
+            <Typography variant="h5" sx={ { flexGrow: 1, fontWeight: '500' } }>
+              { t(`${ SECTION_NAME }.${ index + 1 }`) }
             </Typography>
           </Grid>
-        ))}
+        )) }
 
       </Grid>
     </BlockContainer>
   )
 }
 
-export default Cooperation;
+export default Cooperation
 

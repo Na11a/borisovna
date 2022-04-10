@@ -1,8 +1,7 @@
-import { Typography } from "@mui/material";
-import Box from '@mui/material/Box';
-import { fontSize } from "@mui/system";
-import { TAnchor } from "../../types/types";
-import { pxToRem } from './../../styles/utils';
+import { Container, Typography } from "@mui/material"
+import { TAnchor }               from "../../types/types"
+import { pxToRem }               from './../../styles/utils'
+
 type TVariant = "primary" | "secondary"
 
 interface TitleProps {
@@ -14,10 +13,10 @@ interface TitleProps {
 
 const basicStyle = {
   textTransform: "uppercase",
-  textAlign: "center",
-  fontStyle: "normal",
-  fontWeight: "900",
-  lineHeight: "120%",
+  textAlign    : "center",
+  fontStyle    : "normal",
+  fontWeight   : "900",
+  lineHeight   : "120%",
 }
 
 const primaryStyle = {
@@ -29,22 +28,18 @@ const secondaryStyle = {
 }
 
 export const Title = ({ subTitle, name, variant, anchor }: TitleProps) => (
-  <Box marginBottom={pxToRem(20)}>
-    <Typography
-      variant='h5'
-      id={anchor}
-      sx={{
-        ...(variant === 'primary' ? primaryStyle : secondaryStyle),
-        color: "primary.main"
-      }}
-    >
-      {subTitle}
-    </Typography>
-    <Typography variant='h5' sx={{
+  <Container sx={ { marginBottom: pxToRem(20) } }>
+    <Typography variant="h5" id={ anchor } sx={ {
       ...(variant === 'primary' ? primaryStyle : secondaryStyle),
-      color: "secondary.main"
-    }} >
-      {name}
+      color: "primary.main",
+    } }>
+      { subTitle }
     </Typography>
-  </Box >
+    <Typography variant="h5" sx={ {
+      ...(variant === 'primary' ? primaryStyle : secondaryStyle),
+      color: "secondary.main",
+    } }>
+      { name }
+    </Typography>
+  </Container>
 )
