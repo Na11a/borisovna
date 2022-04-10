@@ -8,8 +8,8 @@ import ApartmentOutlinedIcon from '@mui/icons-material/ApartmentOutlined'
 import FoundationOutlinedIcon from '@mui/icons-material/FoundationOutlined'
 import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline'
 import { useTranslation } from 'react-i18next'
-import { Title } from '../Title'
-import { BlockContainer } from '../index'
+import { Title } from '../../Title'
+import { BlockContainer } from '../../index'
 import { Grid, Typography } from '@mui/material'
 
 const SECTION_NAME = "cooperation"

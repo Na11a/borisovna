@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { Box } from "@mui/system"
-import { Title } from "../Title"
+import { Title } from "../../Title"
 import { PurposeCard } from "./PurposeCard"
 
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney"
@@ -12,7 +12,7 @@ import FlagIcon from "@mui/icons-material/Flag"
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter"
 import WbSunnyIcon from "@mui/icons-material/WbSunny"
 import FavoriteIcon from "@mui/icons-material/Favorite"
-import BlockContainer from "../Layout/BlockContainer"
+import BlockContainer from "../../Layout/BlockContainer"
 
 const SECTION_NAME = "PURPOSE AND DIRECTIONS OF THE FOUNDATION"
 

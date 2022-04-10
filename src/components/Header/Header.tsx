@@ -1,36 +1,72 @@
-import { Box, List, ListItem, MenuItem, MenuList, Typography } from "@mui/material";
-import i18next, { t } from "i18next";
-import React from "react";
-import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
-import { pxToRem } from "../../styles/utils";
-import MainLayout from "../Layout/MainLayout";
-import { Title } from "../Title";
-import DonateButton from './../Buttons/Donate';
-import BlockContainer from './../Layout/BlockContainer';
+import { Box, MenuList, MenuItem, Select, SelectChangeEvent, useScrollTrigger, Slide } from '@mui/material'
+import React, { useState, ReactNode, ReactElement } from 'react'
 
-
-type IHeaderProps = {
-  setActiveBlock: React.Dispatch<React.SetStateAction<string>>
-}
-
-const anchor = 'main'
-
-const Header = ({ setActiveBlock }: IHeaderProps) => {
-  const { t } = useTranslation();
-  const defaultMargin = pxToRem(20)
+import MenuIcon from '@mui/icons-material/Menu';
+import i18next from 'i18next';
+import { pxToRem } from '../../styles/utils';
+const LanguageSelector = () => {
+  const [language, setLanguage] = useState(i18next.language)
+  const handleChangeLanguage = (event: SelectChangeEvent<string>) => {
+    i18next.changeLanguage(event.target.value);
+    localStorage.setItem('language', event.target.value)
+    setLanguage(event.target.value)
+  };
   return (
-    <BlockContainer setActiveAnchor={setActiveBlock} anchor={anchor}>
-      <Box marginBottom={defaultMargin}>
-        <Title anchor={anchor} variant="primary" subTitle={t("subtitle")} name={t('title')} />
-      </Box>
-      <Box component='img' src='./images/photo-for-banner.png' marginBottom={defaultMargin} />
-      <Typography textAlign="left" color="black" fontWeight="400" marginBottom={defaultMargin}>
-        {t('description')}
-      </Typography>
-      <DonateButton />
-    </BlockContainer >
+    <Select variant='standard' sx={{ height: '30px', width: '50px', fontWeight: '700' }} disableUnderline IconComponent='a' value={language} onChange={handleChangeLanguage}>
+      <MenuItem value='en' children='EN' />
+      <MenuItem value='uk' children='UK' />
+    </Select>
   );
 };
-export default Header;
 
+interface INavBarProps {
+  handleOpenMenu: React.Dispatch<React.SetStateAction<boolean>>
+}
+const HideOnScroll = ({ children }: { children: ReactElement }) => {
+  const trigger = useScrollTrigger()
+  return (
+    <Slide appear={false} direction={'down'} in={!trigger}>
+      {children}
+    </Slide>
+  )
+}
+const Header = ({ handleOpenMenu }: INavBarProps) => {
+  return (
+    <HideOnScroll>
+      <Box
+        display='flex'
+        alignItems='center'
+        justifyContent='space-between'
+        sx={{
+          boxSizing: 'border-box',
+          position: 'fixed',
+          zIndex: 4,
+          top: '0',
+          height: pxToRem(80),
+          backgroundColor:'white',
+          width: '100%',
+          boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
+          marginBottom: pxToRem(20),
+          paddingX: pxToRem(20)
+        }}>
+        <Box children='logo' />
+        <Box display='flex' alignItems='center'>
+          <Box>
+            <LanguageSelector />
+          </Box>
+          <Box onClick={() => handleOpenMenu(true)}>
+            <MenuIcon sx={{
+              height: '30px',
+              width: '30px',
+              '&:hover':{
+                cursor:'pointer'
+              }
+            }} />
+          </Box>
+        </Box>
+      </Box>
+    </HideOnScroll>
+  )
+}
+
+export default Header

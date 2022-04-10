@@ -1,9 +1,9 @@
 import React from 'react'
-import { Title } from '../Title';
+import { Title } from '../../Title';
 import { Typography } from '@mui/material';
 import Box from '@mui/system/Box/Box';
-import BlockContainer from '../Layout/BlockContainer';
-import { defaultBlockMargin } from '../../styles/utils';
+import BlockContainer from '../../Layout/BlockContainer';
+import { defaultBlockMargin } from '../../../styles/utils';
 import { useTranslation } from 'react-i18next';
 
 interface IOurMissionProps {

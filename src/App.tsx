@@ -4,7 +4,7 @@ import './App.css';
 import './App.css'
 import './i18n'
 import { Route, Routes }        from 'react-router-dom'
-import { Main, PaymentDetails } from './components'
+import { MainPage, PaymentDetails } from './components'
 import { ThemeProvider } from '@mui/material/styles'
 import { muiTheme }      from './styles/muiTheme'
 
@@ -17,7 +17,7 @@ function App() {
     <Suspense fallback="Loading..">
       <ThemeProvider theme={ muiTheme }>
         <Routes>
-          <Route path='/' element={<Main activeBlock={activeBlock} setActiveBlock={setActiveBlock} />} />
+          <Route path='/' element={<MainPage activeBlock={activeBlock} setActiveBlock={setActiveBlock} />} />
           <Route path="/payment-details" element={<PaymentDetails setActiveBlock={setActiveBlock} />} />
         </Routes>
       </ThemeProvider>
