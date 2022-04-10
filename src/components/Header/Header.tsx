@@ -15,21 +15,6 @@ type Props = {}
 
 const titles = [{ index: 1, route: "/" }, { index: 2, route: "/" }];
 
-const NavBar = () => (
-  <Box sx={{
-    display: "flex",
-    justifyContent: "space-around",
-    alignItems: "center",
-    width: "100vw",
-    height: "100px",
-    marginX: "-50px",
-    backgroundColor: "#0d1c7c"
-  }}>
-    <Box sx={{ width: "150px" }}>icon</Box>
-    <Menu />
-  </Box>
-);
-
 const Menu = () => {
 
   return (
@@ -66,7 +51,7 @@ const Header = () => {
   return (
     <BlockContainer >
       <Box marginBottom={defaultMargin}>
-        <Title subTitle={t("subtitle")} name={t('title')} />
+        <Title variant="primary" subTitle={t("subtitle")} name={t('title')} />
       </Box>
       <Box component='img' src='./images/photo-for-banner.png' marginBottom={defaultMargin} />
       <Typography textAlign="left" color="black" fontWeight="400" marginBottom={defaultMargin}>

@@ -20,12 +20,14 @@ const basicStyle = {
 }
 
 const primaryStyle = {
+  ...basicStyle,
   fontSize: "32px",
-  ...basicStyle
+
 }
 const secondaryStyle = {
+  ...basicStyle,
   fontSize: "24px",
-  ...basicStyle
+
 }
 
 
