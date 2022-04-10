@@ -1,10 +1,10 @@
 import { Container, Fade, SvgIconTypeMap, Typography } from "@mui/material"
 import {
   OverridableComponent,
-}                                                       from "@mui/material/OverridableComponent"
-import { useState }                                     from "react"
+}                                                      from "@mui/material/OverridableComponent"
+import { useState }                                    from "react"
 import VizSensor
-                                                        from 'react-visibility-sensor'
+                                                       from 'react-visibility-sensor'
 
 interface PurposeCardProps {
   icon: OverridableComponent<SvgIconTypeMap>,
@@ -18,7 +18,7 @@ export const PurposeCard = ({ icon: Icon, text }: PurposeCardProps) => {
       <Fade in={ active } timeout={ 1000 }>
         <Container sx={ containerStyle }>
           <Icon sx={ iconStyle }/>
-          <Typography>{ text }</Typography>
+          <Typography variant="h6">{ text }</Typography>
         </Container>
       </Fade>
     </VizSensor>

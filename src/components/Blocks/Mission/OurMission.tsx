@@ -1,7 +1,7 @@
 import React                     from 'react'
-import { Title }                 from '../../Title'
-import { Container, Typography } from '@mui/material'
-import BlockContainer            from '../../Layout/BlockContainer'
+import { Title }                         from '../../Title'
+import { Container, styled, Typography } from '@mui/material'
+import BlockContainer                    from '../../Layout/BlockContainer'
 import { defaultBlockMargin }    from '../../../styles/utils'
 import { useTranslation }        from 'react-i18next'
 
@@ -12,7 +12,7 @@ interface IOurMissionProps {
 
 const OurMission = ({ setActiveBlock }: IOurMissionProps) => {
   const { t } = useTranslation()
-
+  const Img = styled("img")({})
   return (
     <BlockContainer setActiveAnchor={ setActiveBlock } anchor={ 'our-mission' }>
       <Container>
@@ -20,22 +20,19 @@ const OurMission = ({ setActiveBlock }: IOurMissionProps) => {
                variant="secondary"
                name={ t('ourMission.titleBlock.title') }/>
       </Container>
-      <Typography flex="50%"
+      <Typography variant="h6"
                   textAlign="left"
                   mb={ defaultBlockMargin }
                   children={ t('ourMission.titleBlock.description') }/>
-      <Container sx={ {
-        borderRadius: '50%', marginBottom: { defaultBlockMargin },
-      } }>
-        <img src="./images/our-mission.png" alt=" photo"/>
+      <Container sx={ {display:'flex',justifyContent:'center', } }>
+        <Img src="./images/our-mission.png" alt=" photo" sx={{borderRadius:'50%'}}/>
       </Container>
       <Container sx={ { textAlign: 'left' } }>
-        <Typography sx={ {
-          fontWeight   : '700',
+        <Typography  variant='h6' fontWeight='700' sx={ {
           textTransform: 'uppercase',
         } } children={ t('ourMission.descriptionBlock.title') }/>
-        <Typography children={ t('ourMission.descriptionBlock.block1') }/>
-        <Typography children={ t('ourMission.descriptionBlock.block2') }/>
+        <Typography variant='h6' children={ t('ourMission.descriptionBlock.block1') }/>
+        <Typography variant='h6' children={ t('ourMission.descriptionBlock.block2') }/>
       </Container>
     </BlockContainer>
   )

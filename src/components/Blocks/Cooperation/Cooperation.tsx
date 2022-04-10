@@ -60,7 +60,7 @@ const Cooperation = ({ setActiveBlock }: ICooperationProps) => {
               ...cardItemStyle, order: `${ index % 2 === 0 ? 1 : -1 }`,
             } }/> }
 
-            <Typography variant="h5" sx={ { flexGrow: 1, fontWeight: '500' } }>
+            <Typography variant="h6" sx={ { flexGrow: 1, fontWeight: '500' } }>
               { t(`${ SECTION_NAME }.${ index + 1 }`) }
             </Typography>
           </Grid>

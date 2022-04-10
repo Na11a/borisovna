@@ -16,7 +16,7 @@ const breakpoints: BreakpointsOptions = {
 
 
 const typography: TypographyOptions = {
-  htmlFontSize: 20,
+  htmlFontSize: 16,
   fontFamily  : 'Roboto, serif',
   h1          : {
     fontWeight: 500,
@@ -53,12 +53,13 @@ const typography: TypographyOptions = {
 
   h6: {
     fontWeight                                                      : 300,
-    fontSize                                                        : '1.2rem',
+    fontSize                                                        : '1rem',
+    lineHeight                                                      : '20.8px',
     [`@media screen and (min-width: ${ breakpoints.values?.md }px)`]: {
-      fontSize: "1.4rem",
+      fontSize: "1.2rem",
     },
     [`@media screen and (min-width: ${ breakpoints.values?.xl }px)`]: {
-      fontSize: "1.6rem",
+      fontSize: "1.4rem",
     },
   },
 

@@ -1,9 +1,9 @@
 import { Container, Typography } from "@mui/material"
-import React                      from "react"
-import { useTranslation }         from "react-i18next"
-import { Title }                  from "../../Title"
-import DonateButton               from '../../Buttons/Donate'
-import BlockContainer             from '../../Layout/BlockContainer'
+import React                     from "react"
+import { useTranslation }        from "react-i18next"
+import { Title }                 from "../../Title"
+import DonateButton              from '../../Buttons/Donate'
+import BlockContainer            from '../../Layout/BlockContainer'
 
 
 type IHeaderProps = {
@@ -22,10 +22,15 @@ const Main = ({ setActiveBlock }: IHeaderProps) => {
                subTitle={ t("subtitle") }
                name={ t('title') }/>
       </Container>
+
       <Container component="img" src="./images/photo-for-banner.png"/>
-      <Typography textAlign="left" color="black" fontWeight="400">
-        { t('description') }
-      </Typography>
+
+      <Container>
+        <Typography variant="h6" textAlign="left" color="black">
+          { t('description') }
+        </Typography>
+      </Container>
+
       <DonateButton/>
     </BlockContainer>
   )

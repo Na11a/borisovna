@@ -16,6 +16,9 @@ const DonateButton = () => {
               borderRadius   : '20px',
               backgroundColor: 'primary',
               fontWeight     : '700',
+              transition     : '0.5s',
+              '&:hover'      : { transform: 'scale(1.1)', transition: '0.5s' },
+              '&:active'      : { transform: 'scale(0.9)', transition: '0.5s' },
             } }>
       <Typography variant="h5"
                   color="white">{ t('button.Donate') } </Typography>
