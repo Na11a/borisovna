@@ -13,7 +13,6 @@ interface TitleProps {
 }
 
 const basicStyle = {
-  typography: "h4",
   textTransform: "uppercase",
   textAlign: "center",
   fontStyle: "normal",
@@ -27,25 +26,24 @@ const primaryStyle = {
 }
 const secondaryStyle = {
   ...basicStyle,
-  fontSize: "24px",
-
 }
 
 
 export const Title = ({ subTitle, name, variant, anchor }: TitleProps) => (
   <Box marginBottom={pxToRem(20)}>
     <Typography
+      variant='h5'
       id={anchor}
       sx={{
         ...(variant === 'primary' ? primaryStyle : secondaryStyle),
-        color: "#045739"
+        color: "primary.main"
       }}
     >
       {subTitle}
     </Typography>
-    <Typography sx={{
+    <Typography variant='h5' sx={{
       ...(variant === 'primary' ? primaryStyle : secondaryStyle),
-      color: "#F55F5F"
+      color: "secondary.main"
     }} >
       {name}
     </Typography>
