@@ -2,7 +2,9 @@
   "title": "“DAKHNIVSKA SICH”",
   "subtitle": "CHARITABLE FOUNDATION",
   "button": {
-    "Donate": "Donate"
+    "Donate": "Donate",
+    "copied":"Copied",
+    "returnBack":"Return back"
   },
   "ourMission": {
     "titleBlock": {

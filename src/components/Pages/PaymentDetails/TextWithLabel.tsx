@@ -3,33 +3,43 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 interface TextWithLabelProps {
   label: string,
-  text: string
+  text: string,
+}
+interface TextWithLabelAndCopyProps extends TextWithLabelProps {
+  setIsCopy: React.Dispatch<React.SetStateAction<boolean>>
+
 }
 
 export const TextWithLabel = ({ label, text }: TextWithLabelProps) => (
   <Box sx={containerStyle}>
-    <Typography sx={{ ...fontStyle, textTransform: "uppercase", color: "#045739"}}>
+    <Typography sx={{ ...fontStyle, textTransform: "uppercase", color: "#045739" }}>
       {label}
     </Typography>
-    <Typography sx={{ ...fontStyle, color: "#000000"}}>
+    <Typography sx={{ ...fontStyle, color: "#000000" }}>
       {text}
-    </Typography> 
+    </Typography>
   </Box>
 )
 
-export const TextWithLabelAndCopy = ({ label, text }: TextWithLabelProps) => {
-  const handleCopy = () => navigator.clipboard.writeText(text)
+export const TextWithLabelAndCopy = ({ label, text, setIsCopy }: TextWithLabelAndCopyProps) => {
+  const handleCopy = () => {
+    navigator.clipboard.writeText(text)
+    setIsCopy(true)
+    setTimeout(() => {
+      setIsCopy(false)
+    }, 3000)
+  }
 
   return (
     <Box sx={containerStyle}>
-      <Typography sx={{ ...fontStyle, textTransform: "uppercase", color: "#045739"}}>
+      <Typography sx={{ ...fontStyle, textTransform: "uppercase", color: "#045739" }}>
         {label}
       </Typography>
       <Box sx={clipboardTextContainerStyle}>
-        <Typography sx={{ ...fontStyle, color: "#000000"}}>
+        <Typography sx={{ ...fontStyle, color: "#000000" }}>
           {text}
-        </Typography> 
-        <ContentCopyIcon onClick={handleCopy}/>
+        </Typography>
+        <ContentCopyIcon onClick={handleCopy} />
       </Box>
     </Box>
   )
@@ -41,7 +51,7 @@ const containerStyle = {
   flexDirection: "column"
 }
 
-const clipboardTextContainerStyle = { 
+const clipboardTextContainerStyle = {
   display: "flex",
   gap: "10px",
   alignItems: "center",
