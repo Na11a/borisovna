@@ -39,18 +39,15 @@ const anchor = 'main'
 
 interface IPaymentDetailsProps {
   setActiveBlock: React.Dispatch<React.SetStateAction<string>>
-  openMenu: () => void
-  isMenuOpen: boolean
-  closeMenu: () => void
   activeBlock: string
 }
 
-export const PaymentDetails = ({ setActiveBlock, openMenu, isMenuOpen, closeMenu, activeBlock }: IPaymentDetailsProps) => {
+export const PaymentDetails = ({ setActiveBlock, activeBlock }: IPaymentDetailsProps) => {
   const [isCopy, setIsCopy] = useState(false)
   const { t } = useTranslation()
 
   return (
-    <MainLayout>
+    <MainLayout activeBlock={activeBlock}>
       <BlockContainer anchor={anchor}
         setActiveAnchor={setActiveBlock}
         direction="column">

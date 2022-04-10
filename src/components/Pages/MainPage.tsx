@@ -1,20 +1,17 @@
 import MainLayout from '../Layout/MainLayout'
 import { useCallback, useState } from 'react'
 
-import { Cooperation, Main, Menu, OurMission, Purpose, Header } from '..'
+import { Cooperation, Main, OurMission, Purpose, Header } from '..'
 
 interface IPageContainerProps {
   setActiveBlock: React.Dispatch<React.SetStateAction<string>>
-  openMenu: () => void
+  activeBlock: string
 }
-
 const PageContainer = ({
-  setActiveBlock,
-  openMenu
+  setActiveBlock, activeBlock
 }: IPageContainerProps) => (
   <>
-    <Header openMenu={openMenu} />
-    <MainLayout>
+    <MainLayout activeBlock={activeBlock}>
       <Main setActiveBlock={setActiveBlock} />
       <OurMission setActiveBlock={setActiveBlock} />
       <Purpose setActiveBlock={setActiveBlock} />
@@ -26,25 +23,16 @@ const PageContainer = ({
 interface IMainPageProps {
   setActiveBlock: React.Dispatch<React.SetStateAction<string>>
   activeBlock: string
-  isMenuOpen: boolean
-  openMenu: () => void
-  closeMenu: () => void
 }
 
 export default function MainPage({
-  setActiveBlock, activeBlock,
+  setActiveBlock, activeBlock
 }: IMainPageProps) {
-  const [isOpenMenu, setIsOpenMenu] = useState(false)
-  const closeMenu = useCallback(() => setIsOpenMenu(false), [])
-  const openMenu = useCallback(() => setIsOpenMenu(true), [])
   return (
-    <> {!isOpenMenu ?
-      <PageContainer
-        setActiveBlock={setActiveBlock}
-        openMenu={openMenu} /> :
-      <Menu activeBlock={activeBlock} closeMenu={closeMenu} />}
-
-    </>
+    <PageContainer
+      activeBlock={activeBlock}
+      setActiveBlock={setActiveBlock}
+    />
   )
 }
 

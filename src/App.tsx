@@ -11,21 +11,14 @@ import { muiTheme } from './styles/muiTheme'
 function App() {
 
   const [activeBlock, setActiveBlock] = useState('main')
-  const [isOpenMenu, setIsOpenMenu] = useState(false)
 
-  const openMenu = useCallback(() => {
-    setIsOpenMenu(true)
-  }, [])
-  const closeMenu = useCallback(() => {
-    setIsOpenMenu(false)
-  }, [])
 
   return (
     <Suspense fallback="Loading..">
       <ThemeProvider theme={muiTheme}>
         <Routes>
-          <Route path='/' element={<MainPage isMenuOpen={isOpenMenu} activeBlock={activeBlock} setActiveBlock={setActiveBlock} openMenu={openMenu} closeMenu={closeMenu} />} />
-          <Route path="/payment-details" element={<PaymentDetails isMenuOpen={isOpenMenu} activeBlock={activeBlock} setActiveBlock={setActiveBlock} openMenu={openMenu} closeMenu={closeMenu} />} />
+          <Route path='/' element={<MainPage activeBlock={activeBlock} setActiveBlock={setActiveBlock} />} />
+          <Route path="/payment-details" element={<PaymentDetails activeBlock={activeBlock} setActiveBlock={setActiveBlock} />} />
         </Routes>
       </ThemeProvider>
     </Suspense>
