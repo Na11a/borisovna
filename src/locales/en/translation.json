@@ -95,5 +95,14 @@
     "details":"details",
     "contacts":"contacts",
     "legislativeBases":"Legislative bases"
+  },
+  "cooperation": {
+  "title": "Cooperation with the foundation",
+    "1": "With religious confessions",
+    "2": "With legislative and executive bodies, local self-government",
+    "3": "with institutions, institutions of education, science and culture, health care, sports, and tourism",
+    "4": "With other collective state and private public institutions, enterprises and organizations, regardless of their subordination to the organizational and legal form and industry affiliation",
+    "5": "with foreign organizations",
+    "6": "With citizens of Ukraine and other countries"
   }
 }

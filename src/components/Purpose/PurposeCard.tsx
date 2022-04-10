@@ -17,12 +17,11 @@ const iconStyle = {
   color: "#045739",
   width: "50px",
   height: "50px",
-  padding: "0px 15px 0px 15px"
+  padding: "0px 15px"
 }
 
 const containerStyle = {
   marginTop: "20px",
-  
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
