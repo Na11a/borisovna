@@ -57,7 +57,7 @@ const Cooperation = ({ setActiveBlock }: ICooperationProps) => {
 
             {<Item sx={{ ...cardItemStyle, order: `${index % 2 === 0 ? 1 : -1}` }} />}
 
-            <Typography sx={{ flexGrow: 1, fontWeight: '500' }}>
+            <Typography variant='h5' sx={{ flexGrow: 1, fontWeight: '500' }}>
               {t(`${SECTION_NAME}.${index + 1}`)}
             </Typography>
           </Grid>

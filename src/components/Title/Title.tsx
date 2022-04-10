@@ -28,7 +28,6 @@ const secondaryStyle = {
   ...basicStyle,
 }
 
-
 export const Title = ({ subTitle, name, variant, anchor }: TitleProps) => (
   <Box marginBottom={pxToRem(20)}>
     <Typography
