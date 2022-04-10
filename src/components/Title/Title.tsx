@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import Box from '@mui/material/Box';
 import { fontSize } from "@mui/system";
+import { TAnchor } from "../../types/types";
 import { pxToRem } from './../../styles/utils';
 type TVariant = "primary" | "secondary"
 
@@ -8,6 +9,7 @@ interface TitleProps {
   subTitle?: string,
   name: string
   variant?: TVariant
+  anchor: TAnchor
 }
 
 const basicStyle = {
@@ -21,7 +23,6 @@ const basicStyle = {
 
 const primaryStyle = {
   ...basicStyle,
-  fontSize: "32px",
 
 }
 const secondaryStyle = {
@@ -31,12 +32,14 @@ const secondaryStyle = {
 }
 
 
-export const Title = ({ subTitle, name, variant }: TitleProps) => (
+export const Title = ({ subTitle, name, variant, anchor }: TitleProps) => (
   <Box marginBottom={pxToRem(20)}>
-    <Typography sx={{
-      ...(variant === 'primary' ? primaryStyle : secondaryStyle),
-      color: "#045739"
-    }}
+    <Typography
+      id={anchor}
+      sx={{
+        ...(variant === 'primary' ? primaryStyle : secondaryStyle),
+        color: "#045739"
+      }}
     >
       {subTitle}
     </Typography>

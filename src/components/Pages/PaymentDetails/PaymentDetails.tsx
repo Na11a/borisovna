@@ -9,6 +9,8 @@ import { pxToRem } from './../../../styles/utils';
 
 const EDRPOU = "38368563"
 const BANK_ACCOUNT = "UA963052990000026004011602838"
+
+
 const SuccessCopy = ({ isCopy }: { isCopy: boolean }) => {
   const { t } = useTranslation()
   const navigate = useNavigate()
@@ -32,15 +34,20 @@ const SuccessCopy = ({ isCopy }: { isCopy: boolean }) => {
     </Button>
   )
 }
+const anchor = 'main'
+interface IPaymentDetailsProps {
+  setActiveBlock: React.Dispatch<React.SetStateAction<string>>
+}
 
-export const PaymentDetails = () => {
+export const PaymentDetails = ({ setActiveBlock }: IPaymentDetailsProps) => {
   const [isCopy, setIsCopy] = useState(false)
   const { t } = useTranslation()
 
   return (
     <MainLayout>
-      <BlockContainer direction="column">
+      <BlockContainer anchor={anchor} setActiveAnchor={setActiveBlock} direction="column">
         <Title
+          anchor={anchor}
           subTitle={t("PAYMENT_DETAILS_PAGE.TITLE")}
           name={t("PAYMENT_DETAILS_PAGE.NAME")}
         />

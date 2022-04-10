@@ -1,1 +1,0 @@
-export { Purpose } from "./Purpose"

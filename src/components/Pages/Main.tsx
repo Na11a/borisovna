@@ -1,36 +1,37 @@
-import { useTranslation }        from 'react-i18next';
-import Header                    from '../Header/Header';
-import MainLayout                from '../Layout/MainLayout';
+import { useTranslation } from 'react-i18next';
+import MainLayout from '../Layout/MainLayout';
 import { useCallback, useState } from 'react'
-import OurMission                from '../Mission/OurMission';
-import NavBar                    from '../NavBar/NavBar';
-import { pxToRem }               from './../../styles/utils';
-import { Menu }                  from './../';
-import { Purpose }               from '../Purpose';
-import { Cooperation }           from '../Cooperation/Cooperation'
+import NavBar from '../NavBar/NavBar';
+import { pxToRem } from './../../styles/utils';
+import { Cooperation, Header, Purpose, OurMission } from '../'
+import { Menu } from './../';
 interface IPageContainerProps {
   setIsOpenMenu: React.Dispatch<React.SetStateAction<boolean>>
-
+  setActiveBlock: React.Dispatch<React.SetStateAction<string>>
 }
 
-const PageContainer = ({ setIsOpenMenu }: IPageContainerProps) => (
+const PageContainer = ({ setIsOpenMenu, setActiveBlock }: IPageContainerProps) => (
   <>
     <NavBar handleOpenMenu={setIsOpenMenu} />
     <MainLayout>
-      <Header />
-      <OurMission />
-      <Cooperation/>
-      <Purpose />
+      <Header setActiveBlock={setActiveBlock} />
+      <OurMission setActiveBlock={setActiveBlock} />
+      <Purpose setActiveBlock={setActiveBlock} />
+      <Cooperation setActiveBlock={setActiveBlock}/>
     </MainLayout>
   </>
 )
-
-export default function Main() {
+interface IMainProps {
+  setActiveBlock: React.Dispatch<React.SetStateAction<string>>
+  activeBlock: string
+}
+export default function Main({ setActiveBlock, activeBlock }: IMainProps) {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
   const closeMenu = useCallback(() => setIsOpenMenu(false), [])
-  const openMenu = useCallback(()=>setIsOpenMenu(true),[])
+  console.log(activeBlock)
+  const openMenu = useCallback(() => setIsOpenMenu(true), [])
   return (
-    <> {!isOpenMenu ? <PageContainer setIsOpenMenu={openMenu} /> : <Menu setInOpenMenu={closeMenu}/>}
+    <> {!isOpenMenu ? <PageContainer setActiveBlock={setActiveBlock} setIsOpenMenu={openMenu} /> : <Menu activeBlock={activeBlock} setInOpenMenu={closeMenu} />}
 
     </>
   )

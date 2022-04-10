@@ -10,48 +10,19 @@ import DonateButton from './../Buttons/Donate';
 import BlockContainer from './../Layout/BlockContainer';
 
 
-type Props = {}
+type IHeaderProps = {
+  setActiveBlock: React.Dispatch<React.SetStateAction<string>>
+}
 
+const anchor = 'main'
 
-const titles = [{ index: 1, route: "/" }, { index: 2, route: "/" }];
-
-const Menu = () => {
-
-  return (
-    <List style={{ display: "flex" }}>
-      {titles.map(el => {
-        const name = t(`pages.${el.index}`);
-        return (
-          <>
-            <ListItem style={{ display: "inline-block", whiteSpace: "nowrap" }}>
-              <NavLink
-                className={({ isActive }: any) => (isActive ? "active" : "")}
-                to={`${titles.find(e => e === el)!.route}`}
-              >
-                <Typography
-                  sx={{
-                    typography: "h5",
-                    color: "#fff9ec",
-                    textDecoration: "none",
-                  }}
-                  children={name}
-                />
-              </NavLink>
-            </ListItem>
-
-          </>
-        );
-      })}
-    </List>
-  );
-};
-const Header = () => {
+const Header = ({ setActiveBlock }: IHeaderProps) => {
   const { t } = useTranslation();
   const defaultMargin = pxToRem(20)
   return (
-    <BlockContainer >
+    <BlockContainer setActiveAnchor={setActiveBlock} anchor={anchor}>
       <Box marginBottom={defaultMargin}>
-        <Title variant="primary" subTitle={t("subtitle")} name={t('title')} />
+        <Title anchor={anchor} variant="primary" subTitle={t("subtitle")} name={t('title')} />
       </Box>
       <Box component='img' src='./images/photo-for-banner.png' marginBottom={defaultMargin} />
       <Typography textAlign="left" color="black" fontWeight="400" marginBottom={defaultMargin}>

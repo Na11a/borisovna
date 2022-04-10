@@ -12,6 +12,7 @@ import FlagIcon from "@mui/icons-material/Flag"
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter"
 import WbSunnyIcon from "@mui/icons-material/WbSunny"
 import FavoriteIcon from "@mui/icons-material/Favorite"
+import BlockContainer from "../Layout/BlockContainer"
 
 const SECTION_NAME = "PURPOSE AND DIRECTIONS OF THE FOUNDATION"
 
@@ -26,22 +27,29 @@ const iconOrder = [
   WbSunnyIcon,
   FavoriteIcon
 ]
+interface IPurposeProps {
+  setActiveBlock: React.Dispatch<React.SetStateAction<string>>
+}
 
-export const Purpose = () => {
+const Purpose = ({ setActiveBlock }: IPurposeProps) => {
   const { t } = useTranslation()
 
   return (
-    <Box>
-      <Title name={t(`${SECTION_NAME}.TITLE`)}/>
-      {
-        iconOrder.map((icon, i) => (
-          <PurposeCard
-            key={i}
-            icon={icon}
-            text={t(`${SECTION_NAME}.${i + 1}`)}
-          />
-        ))
-      }
-    </Box>
+    <BlockContainer anchor="purpose-and-activities" setActiveAnchor={setActiveBlock}>
+      <Title anchor="purpose-and-activities" name={t(`${SECTION_NAME}.TITLE`)} />
+      <Box>
+        {
+          iconOrder.map((icon, i) => (
+            <PurposeCard
+              key={i}
+              icon={icon}
+              text={t(`${SECTION_NAME}.${i + 1}`)}
+            />
+          ))
+        }
+      </Box>
+    </BlockContainer>
   )
 }
+
+export default Purpose

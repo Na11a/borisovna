@@ -1,19 +1,27 @@
-import { SvgIconTypeMap, Box, Typography } from "@mui/material";
+import { SvgIconTypeMap, Box, Typography, Fade } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
-
+import { useState } from "react";
+import VizSensor from 'react-visibility-sensor';
 interface PurposeCardProps {
   icon: OverridableComponent<SvgIconTypeMap>,
   text: string
 }
 
-export const PurposeCard = ({ icon: Icon, text }: PurposeCardProps) => (
-  <Box sx={containerStyle}>
-    <Icon sx={iconStyle}/>
-    <Typography>{text}</Typography>
-  </Box>
-)
+export const PurposeCard = ({ icon: Icon, text }: PurposeCardProps) => {
+  const [active, setActive] = useState(false)
+  return (
+    <VizSensor onChange={(isVisible) => setActive(isVisible)}>
+      <Fade in={active} timeout={1000}>
+        <Box sx={containerStyle}>
+          <Icon sx={iconStyle} />
+          <Typography>{text}</Typography>
+        </Box>
+      </Fade>
+    </VizSensor>
+  )
+}
 
-const iconStyle = { 
+const iconStyle = {
   color: "#045739",
   width: "50px",
   height: "50px",
@@ -26,4 +34,5 @@ const containerStyle = {
   flexDirection: "row",
   alignItems: "center",
   boxShadow: "4px 4px 2px rgba(24, 85, 130, 0.1)",
+
 }
