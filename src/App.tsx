@@ -1,18 +1,13 @@
 
 import React, { Suspense, useCallback, useState } from 'react';
-import './App.css';
-import './App.css'
 import './i18n'
 import { Route, Routes } from 'react-router-dom'
 import { MainPage, PaymentDetails } from './components'
-import { ThemeProvider } from '@mui/material/styles'
 import { muiTheme } from './styles/muiTheme'
+import { ThemeProvider } from '@mui/material';
 
 function App() {
-
   const [activeBlock, setActiveBlock] = useState('main')
-
-
   return (
     <Suspense fallback="Loading..">
       <ThemeProvider theme={muiTheme}>

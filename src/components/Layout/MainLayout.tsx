@@ -3,6 +3,7 @@ import { pxToRem } from './../../styles/utils'
 import { Container } from '@mui/material'
 import { Header } from "..";
 import { Menu } from './../'
+import { flexbox } from "@mui/system";
 interface IMainLayoutProps {
   children: React.ReactNode;
   activeBlock: string
@@ -21,7 +22,13 @@ const MainLayout = ({ children, activeBlock }: IMainLayoutProps) => {
     <>
       {!isOpenMenu ?
         <Container sx={{
-          paddingTop: pxToRem(80), paddingX: pxToRem(20), margin: 0,
+          minWidth:'100vw',
+          margin: 0, 
+          marginTop: pxToRem(100), 
+          padding: 0,
+          display: 'flex',
+          flexDirection:'column',
+          alignItems:'center'
         }}>
           <Header openMenu={openMenu} />
           {children}

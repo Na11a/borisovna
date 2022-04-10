@@ -45,31 +45,31 @@ const Header = ({ openMenu }: INavBarProps) => {
       <Container sx={{
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between',
-        boxSizing: 'border-box',
+        justifyContent: 'space-around',
+        boxSizing:'border-box',
         position: 'fixed',
         zIndex: 4,
         top: '0',
+        right: '0',
         height: pxToRem(80),
         backgroundColor: 'white',
         width: '100%',
         boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
-        marginBottom: pxToRem(20),
-        paddingX: pxToRem(20),
       }}>
         <Container children="logo" />
         <Container sx={{ display: 'flex', alignItems: 'center' }}>
           <Container>
             <LanguageSelector />
           </Container>
-          <Container onClick={openMenu}>
-            <MenuIcon sx={{
-              height: '30px',
-              width: '30px',
-              '&:hover': {
-                cursor: 'pointer',
-              },
-            }} />
+          <Container>
+            <MenuIcon onClick={openMenu}
+              sx={{
+                height: '30px',
+                width: '30px',
+                '&:hover': {
+                  cursor: 'pointer',
+                },
+              }} />
           </Container>
         </Container>
       </Container>
