@@ -8,7 +8,7 @@ import { DonateButton }                          from '../Buttons'
 import MainLayout                                from '../Layout/MainLayout'
 
 type IMenuItemProps = {
-  setInOpenMenu: React.Dispatch<React.SetStateAction<boolean>>
+  closeMenu: () => void
   activeBlock: string
 }
 
@@ -39,8 +39,7 @@ const ListItemContainer = ({
       </Typography>
     </ListItem>)
 }
-const Menu = ({ setInOpenMenu, activeBlock }: IMenuItemProps) => {
-  const closeMenu = useCallback(() => setInOpenMenu(false), [setInOpenMenu])
+const Menu = ({ closeMenu, activeBlock }: IMenuItemProps) => {
   const { t } = useTranslation()
   return (
     <MainLayout>

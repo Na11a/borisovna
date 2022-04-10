@@ -1,23 +1,24 @@
-import MainLayout                                       from '../Layout/MainLayout'
-import { useCallback, useState }                        from 'react'
-import NavBar                                           from '../Header/Header'
-import { Cooperation, Main, Menu, OurMission, Purpose } from '..'
+import MainLayout from '../Layout/MainLayout'
+import { useCallback, useState } from 'react'
+
+import { Cooperation, Main, Menu, OurMission, Purpose, Header } from '..'
 
 interface IPageContainerProps {
-  setIsOpenMenu: React.Dispatch<React.SetStateAction<boolean>>
   setActiveBlock: React.Dispatch<React.SetStateAction<string>>
+  openMenu: () => void
 }
 
 const PageContainer = ({
-  setIsOpenMenu, setActiveBlock,
+  setActiveBlock,
+  openMenu
 }: IPageContainerProps) => (
   <>
-    <NavBar handleOpenMenu={ setIsOpenMenu }/>
+    <Header openMenu={openMenu} />
     <MainLayout>
-      <Main setActiveBlock={ setActiveBlock }/>
-      <OurMission setActiveBlock={ setActiveBlock }/>
-      <Purpose setActiveBlock={ setActiveBlock }/>
-      <Cooperation setActiveBlock={ setActiveBlock }/>
+      <Main setActiveBlock={setActiveBlock} />
+      <OurMission setActiveBlock={setActiveBlock} />
+      <Purpose setActiveBlock={setActiveBlock} />
+      <Cooperation setActiveBlock={setActiveBlock} />
     </MainLayout>
   </>
 )
@@ -25,6 +26,9 @@ const PageContainer = ({
 interface IMainPageProps {
   setActiveBlock: React.Dispatch<React.SetStateAction<string>>
   activeBlock: string
+  isMenuOpen: boolean
+  openMenu: () => void
+  closeMenu: () => void
 }
 
 export default function MainPage({
@@ -34,9 +38,11 @@ export default function MainPage({
   const closeMenu = useCallback(() => setIsOpenMenu(false), [])
   const openMenu = useCallback(() => setIsOpenMenu(true), [])
   return (
-    <> { !isOpenMenu ? <PageContainer setActiveBlock={ setActiveBlock }
-                                      setIsOpenMenu={ openMenu }/> :
-         <Menu activeBlock={ activeBlock } setInOpenMenu={ closeMenu }/> }
+    <> {!isOpenMenu ?
+      <PageContainer
+        setActiveBlock={setActiveBlock}
+        openMenu={openMenu} /> :
+      <Menu activeBlock={activeBlock} closeMenu={closeMenu} />}
 
     </>
   )
