@@ -32,7 +32,7 @@ export const Purpose = () => {
 
   return (
     <Box>
-      <Title name={t('ourMission.titleBlock.title')}/>
+      <Title name={t(`${SECTION_NAME}.TITLE`)}/>
       {
         iconOrder.map((icon, i) => (
           <PurposeCard
