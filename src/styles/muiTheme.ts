@@ -1,8 +1,8 @@
-import { theme }              from './theme'
+import { theme } from './theme'
 import { BreakpointsOptions } from '@mui/material'
-import { createTheme }        from '@mui/material/styles'
-import { TypographyOptions }  from '@mui/material/styles/createTypography'
-import { PaletteOptions }     from '@mui/material/styles/createPalette'
+import { createTheme } from '@mui/material/styles'
+import { TypographyOptions } from '@mui/material/styles/createTypography'
+import { PaletteOptions } from '@mui/material/styles/createPalette'
 
 const breakpoints: BreakpointsOptions = {
   values: {
@@ -17,92 +17,92 @@ const breakpoints: BreakpointsOptions = {
 
 const typography: TypographyOptions = {
   htmlFontSize: 20,
-  fontFamily  : 'Roboto, serif',
-  h1          : {
+  fontFamily: 'Roboto, serif',
+  h1: {
     fontWeight: 500,
   },
-  h2          : {
+  h2: {
     fontWeight: 500,
   },
-  h3          : {
+  h3: {
 
     fontWeight: 500,
   },
 
   h4: {
-    fontWeight                                                      : 500,
-    fontSize                                                        : '2rem',
-    [`@media screen and (min-width: ${ breakpoints.values?.md }px)`]: {
+    fontWeight: 500,
+    fontSize: '2rem',
+    [`@media screen and (min-width: ${breakpoints.values?.md}px)`]: {
       fontSize: "3rem",
     },
-    [`@media screen and (min-width: ${ breakpoints.values?.xl }px)`]: {
+    [`@media screen and (min-width: ${breakpoints.values?.xl}px)`]: {
       fontSize: "4rem",
     },
   },
 
   h5: {
-    fontWeight                                                      : 400,
-    fontSize                                                        : '1.5rem',
-    [`@media screen and (min-width: ${ breakpoints.values?.md }px)`]: {
+    fontWeight: 400,
+    fontSize: '1.5rem',
+    [`@media screen and (min-width: ${breakpoints.values?.md}px)`]: {
       fontSize: "1.7rem",
     },
-    [`@media screen and (min-width: ${ breakpoints.values?.xl }px)`]: {
+    [`@media screen and (min-width: ${breakpoints.values?.xl}px)`]: {
       fontSize: "1.9rem",
     },
   },
 
   h6: {
-    fontWeight                                                      : 300,
-    fontSize                                                        : '1.2rem',
-    [`@media screen and (min-width: ${ breakpoints.values?.md }px)`]: {
+    fontWeight: 300,
+    fontSize: '1.2rem',
+    [`@media screen and (min-width: ${breakpoints.values?.md}px)`]: {
       fontSize: "1.4rem",
     },
-    [`@media screen and (min-width: ${ breakpoints.values?.xl }px)`]: {
+    [`@media screen and (min-width: ${breakpoints.values?.xl}px)`]: {
       fontSize: "1.6rem",
     },
   },
 
-  fontWeightBold : 500,
+  fontWeightBold: 500,
   fontWeightLight: 300,
 
 }
 
 
 const palette: PaletteOptions = {
-  primary    : {
-    main        : theme.colors.primary,
-    light       : `${ theme.colors.primary }35`,
+  primary: {
+    main: theme.colors.primary,
+    light: `${theme.colors.primary}35`,
     contrastText: theme.colors.white,
   },
-  secondary  : {
-    main        : theme.colors.secondary,
-    light       : `${ theme.colors.secondary }35`,
+  secondary: {
+    main: theme.colors.secondary,
+    light: `${theme.colors.secondary}35`,
     contrastText: theme.colors.white,
   },
-  error      : {
+  error: {
     main: theme.colors.error,
   },
-  warning    : {
+  warning: {
     main: theme.colors.warning,
   },
-  info       : {
+  info: {
     main: theme.colors.info,
   },
-  success    : {
+  success: {
     main: theme.colors.success,
   },
-  common     : {
+  common: {
     black: theme.colors.black,
     white: theme.colors.white,
   },
-  text       : {
-    primary  : theme.colors.black,
-    disabled : theme.colors.disabled,
+  text: {
+    primary: theme.colors.black,
+    disabled: theme.colors.disabled,
     secondary: theme.colors.darkGrey,
   },
-  background : {
+  background: {
     default: theme.colors.grey,
-    paper  : theme.colors.white,
+    paper: theme.colors.white,
   },
   tonalOffset: 0.2,
 }
@@ -111,4 +111,13 @@ export const muiTheme = createTheme({
   breakpoints,
   typography,
   palette,
+  components: {
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          margin: '10px 0'
+        }
+      }
+    }
+  }
 })

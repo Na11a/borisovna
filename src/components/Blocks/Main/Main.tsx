@@ -1,4 +1,4 @@
-import { Box, List, ListItem, MenuItem, MenuList, Typography } from "@mui/material";
+import { Box, Container, List, ListItem, MenuItem, MenuList, Typography } from "@mui/material";
 import i18next, { t } from "i18next";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -18,14 +18,13 @@ const anchor = 'main'
 
 const Main = ({ setActiveBlock }: IHeaderProps) => {
   const { t } = useTranslation();
-  const defaultMargin = pxToRem(20)
   return (
     <BlockContainer setActiveAnchor={setActiveBlock} anchor={anchor}>
-      <Box marginBottom={defaultMargin}>
+      <Container >
         <Title anchor={anchor} variant="primary" subTitle={t("subtitle")} name={t('title')} />
-      </Box>
-      <Box component='img' src='./images/photo-for-banner.png' marginBottom={defaultMargin} />
-      <Typography textAlign="left" color="black" fontWeight="400" marginBottom={defaultMargin}>
+      </Container>
+      <Box component='img' src='./images/photo-for-banner.png'  />
+      <Typography textAlign="left" color="black" fontWeight="400" >
         {t('description')}
       </Typography>
       <DonateButton />

@@ -54,7 +54,7 @@ const Menu = ({ setInOpenMenu, activeBlock }: IMenuItemProps) => {
         <ListItemContainer anchor='contacts' isActive={activeBlock === 'contacts'} closeMenu={closeMenu} value={t('menu.contacts')} />
         <ListItemContainer anchor='legislative-bases' isActive={activeBlock === 'legislative-bases'} closeMenu={closeMenu} value={t('menu.legislativeBases')} />
       </List >
-      <Box sx={{ marginTop: '60px' }}>
+      <Box sx={{ marginTop: '60px', width: '100%', textAlign: 'center' }}>
         <DonateButton />
       </Box>
     </MainLayout>

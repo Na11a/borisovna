@@ -27,12 +27,15 @@ const cardWrapperStyle = {
   flexWrap: 'nowrap',
   margin: '15px 0',
   alignItems: 'center',
+  boxShadow: "4px 4px 2px rgba(24, 85, 130, 0.1)",
+
 }
 const cardItemStyle = {
   width: '70px',
   height: '70px',
   fill: '#045739',
   margin: '0 20px',
+
 }
 
 
@@ -40,7 +43,7 @@ type ICooperationProps = {
   setActiveBlock: React.Dispatch<React.SetStateAction<string>>
 }
 const Cooperation = ({ setActiveBlock }: ICooperationProps) => {
-  
+
   const { t } = useTranslation()
 
   return (
