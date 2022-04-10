@@ -10,29 +10,31 @@ const BANK_ACCOUNT = "UA963052990000026004011602838"
 
 export const PaymentDetails = () => {
   const { t } = useTranslation()
-  
-  const {
-    TITLE,
-    NAME,
-    CONTENT: {
-      ADDRESS_TITLE, 
-      ADDRESS_CONTENT, 
-      ACCOUNT_TITLE, 
-      BANK_NAME_TITLE, 
-      BANK_NAME_CONTENT, 
-      SOME_WEIRD_TITLE
-    } 
-  } = t("PAYMENT_DETAILS_PAGE")
 
   return (
     <MainLayout>
       <BlockContainer direction="column">
-        <Title subTitle={TITLE} name={NAME}/>
+        <Title 
+          subTitle={t("PAYMENT_DETAILS_PAGE.TITLE")}
+          name={t("PAYMENT_DETAILS_PAGE.NAME")}
+        />
         <Box sx={dataContainerStyle}>
-          <TextWithLabel label={ADDRESS_TITLE} text={ADDRESS_CONTENT}/>
-          <TextWithLabelAndCopy label={ACCOUNT_TITLE} text={BANK_ACCOUNT}/>
-          <TextWithLabel label={BANK_NAME_TITLE} text={BANK_NAME_CONTENT}/>
-          <TextWithLabelAndCopy label={SOME_WEIRD_TITLE} text={EDRPOU}/>
+          <TextWithLabel 
+            label={t("PAYMENT_DETAILS_PAGE.CONTENT.ADDRESS_TITLE")}
+            text={t("PAYMENT_DETAILS_PAGE.CONTENT.ADDRESS_CONTENT")}
+          />
+          <TextWithLabelAndCopy
+            label={t("PAYMENT_DETAILS_PAGE.CONTENT.ACCOUNT_TITLE")}
+            text={BANK_ACCOUNT}
+          />
+          <TextWithLabel
+            label={t("PAYMENT_DETAILS_PAGE.CONTENT.BANK_NAME_TITLE")}
+            text={t("PAYMENT_DETAILS_PAGE.CONTENT.BANK_NAME_CONTENT")}
+          />
+          <TextWithLabelAndCopy
+            label={t("PAYMENT_DETAILS_PAGE.CONTENT.BANK_NAME_CONTENT")}
+            text={EDRPOU}
+          />
         </Box>
       </BlockContainer>
     </MainLayout>

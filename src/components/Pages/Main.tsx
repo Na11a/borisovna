@@ -6,6 +6,7 @@ import OurMission from '../Mission/OurMission';
 import NavBar from '../NavBar/NavBar';
 import { pxToRem } from './../../styles/utils';
 import { Menu } from './../';
+import { Purpose } from '../Purpose';
 interface IPageContainerProps {
   setIsOpenMenu: React.Dispatch<React.SetStateAction<boolean>>
 
@@ -17,6 +18,7 @@ const PageContainer = ({ setIsOpenMenu }: IPageContainerProps) => (
     <MainLayout>
       <Header />
       <OurMission />
+      <Purpose />
     </MainLayout>
   </>
 )

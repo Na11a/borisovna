@@ -1,0 +1,28 @@
+import { SvgIconTypeMap, Box, Typography } from "@mui/material";
+import { OverridableComponent } from "@mui/material/OverridableComponent";
+
+interface PurposeCardProps {
+  icon: OverridableComponent<SvgIconTypeMap>,
+  text: string
+}
+
+export const PurposeCard = ({ icon: Icon, text }: PurposeCardProps) => (
+  <Box sx={containerStyle}>
+    <Icon sx={iconStyle}/>
+    <Typography>{text}</Typography>
+  </Box>
+)
+
+const iconStyle = { 
+  color: "#045739",
+  width: "50px",
+  height: "50px"
+}
+
+const containerStyle = {
+  marginTop: "20px",
+  
+  display: "flex",
+  flexDirection: "row",
+  boxShadow: "4px 4px 2px rgba(24, 85, 130, 0.1)",
+}
