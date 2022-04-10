@@ -16,7 +16,8 @@ export const PurposeCard = ({ icon: Icon, text }: PurposeCardProps) => (
 const iconStyle = { 
   color: "#045739",
   width: "50px",
-  height: "50px"
+  height: "50px",
+  padding: "0px 15px 0px 15px"
 }
 
 const containerStyle = {
@@ -24,5 +25,6 @@ const containerStyle = {
   
   display: "flex",
   flexDirection: "row",
+  alignItems: "center",
   boxShadow: "4px 4px 2px rgba(24, 85, 130, 0.1)",
 }
