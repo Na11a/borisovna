@@ -11,39 +11,7 @@ import BlockContainer from './../Layout/BlockContainer';
 
 
 type Props = {}
-const UpperHeader = () => {
-  const handleChangeLanguage = (name: string) => {
-    i18next.changeLanguage(name.toLowerCase());
-  };
-  return (
-    <Box sx={{
-      display: "flex",
-      justifyContent: "flex-end",
-      paddingY: "10px"
-    }}>
-      <MenuList sx={{
-        maxWidth: "fit-content",
-        color: "white",
-        padding: 0,
-        border: "1px solid white"
-      }}>
-        {["En", "Uk"].map(el => (
-          <MenuItem
-            key={el}
-            onClick={() => handleChangeLanguage(el)}
-            sx={{
-              marginY: 0,
-              paddingY: 0,
-              display: "inline",
-              fontWeight: i18next.language === el.toLowerCase() ? 600 : 400
-            }}
-            children={el} />
-        ))
-        }
-      </MenuList>
-    </Box>
-  );
-};
+
 
 const titles = [{ index: 1, route: "/" }, { index: 2, route: "/" }];
 

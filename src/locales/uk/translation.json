@@ -78,8 +78,16 @@
       "SOME_WEIRD_TITLE": "ЄДРПОУ ОТРИМУВАЧА"
     }
   },
-  "pages": {
-    "1": "Головна",
-    "2": "No main"
+  "menu": {
+    "main": "Головна",
+    "ourMission": "Наша місія",
+    "geographyOfActivity":"Географія діяльності",
+    "fundCooperation":"Співпраця фонду",
+    "internationalActivities":"Міжнародна діяльність",
+    "purposeAndActivities":"Мета та напрямки діяльності",
+    "goodDeeds":"Добрі справи",
+    "details":"Реквізити",
+    "contacts":"Контакти",
+    "legislativeBases":"Законодавчі основи"
   }
 }
