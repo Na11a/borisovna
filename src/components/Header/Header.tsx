@@ -54,7 +54,9 @@ const Header = ({ openMenu }: INavBarProps) => {
         right: '0',
         height: pxToRem(80),
         backgroundColor: 'white',
-        width: '100%',
+        width: '100vw',
+        paddingX:'10%',
+        marginTop:'10px',
         boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
       }}>
         <Box children="logo" />

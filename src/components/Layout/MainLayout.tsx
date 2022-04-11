@@ -1,9 +1,8 @@
 import * as React from "react"
 import { pxToRem }        from './../../styles/utils'
-import { Box, Container } from '@mui/material'
+import { Box} from '@mui/material'
 import { Header }         from "..";
 import { Menu } from './../'
-import { flexbox } from "@mui/system";
 interface IMainLayoutProps {
   children: React.ReactNode;
   activeBlock: string
@@ -24,11 +23,9 @@ const MainLayout = ({ children, activeBlock }: IMainLayoutProps) => {
         <Box sx={{
           minWidth:'100vw',
           margin: 0, 
+          boxSizing:'border-box',
           marginTop: pxToRem(100), 
-          padding: 0,
-          display: 'flex',
-          flexDirection:'column',
-          alignItems:'center'
+          padding:'0 10px',
         }}>
           <Header openMenu={openMenu} />
           {children}
