@@ -116,8 +116,8 @@ export const muiTheme = createTheme({
       styleOverrides: {
         root: {
           margin: '10px 0',
-          minWidth:'100%'
-      
+          minWidth: '100%'
+
         },
       },
     },
