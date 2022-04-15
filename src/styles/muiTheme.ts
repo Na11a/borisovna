@@ -25,7 +25,6 @@ const typography: TypographyOptions = {
     fontWeight: 500,
   },
   h3: {
-
     fontWeight: 500,
   },
 
