@@ -8,3 +8,4 @@ export type TAnchor =
   | 'details'
   | 'contacts'
   | 'legislative-bases'
+  | 'geography-of-activity'

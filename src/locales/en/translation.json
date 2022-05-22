@@ -33,7 +33,7 @@
     "2": "The Foundation does not receive or provide income from activities, and is not a profitable organization."
   },
   "FOUNDATION COOPERATION": "The Foundation cooperates with religious denominations, legislative and executive bodies, local governments, institutions, educational, scientific and cultural institutions, health care, sports and tourism, other collective, public and private public institutions, enterprises and organizations, regardless of their organizational subordination, legal form and industry affiliation, as well as foreign organizations and citizens of Ukraine and other countries",
-  "INTERNATIONAL ACIVITY": {
+  "INTERNATIONAL ACTIVITY": {
     "1": "International charitable activities are carried out through participation in international charitable projects, participation in the work of international charitable organizations, as well as in other forms that do not contradict the legislation of Ukraine and the norms and principles of international law",
     "2": "Cooperation with foreign companies, organizations, enterprises and citizens to carry out charitable activities and provide charitable assistance."
   },
@@ -104,5 +104,28 @@
     "4": "With other collective state and private public institutions, enterprises and organizations, regardless of their subordination to the organizational and legal form and industry affiliation",
     "5": "with foreign organizations",
     "6": "With citizens of Ukraine and other countries"
+  },
+  "goodDeeds": {
+    "title": "Good deeds",
+    "territoryMain": {
+      "title": "Providing territory for children's festivals, competitions, contests, camps."
+    },
+    "weAreCossacks": {
+      "title": "City creative festival of student youth “We are from a Cossack Family”."
+    }
+  },
+  "internationalActivity": {
+    "title": "International Activity",
+    "1": "International charitable activities are carried out through participation in international charitable projects, participation in the work of international charitable organizations, as well as in other forms that do not contradict the legislation of Ukraine and the norms and principles of international law",
+    "2": "Cooperation with foreign companies, organizations, enterprises and citizens to carry out charitable activities and provide charitable assistance."
+  },
+  "geography-of-activity": {
+    "title": "Geography of activity",
+    "description": "The Foundation’s activities are spread in the Cherkasy region"
+  },
+  "legislativeBasis": {
+    "title": "Legislative Basis",
+    "1": "The charitable foundation operates on the basis of the Charter",
+    "2": "In its work the foundation is guided by the Law of Ukraine “On Charity and Charitable Organizations”, the Constitution of Ukraine and other legislative acts and laws of Ukraine."
   }
 }

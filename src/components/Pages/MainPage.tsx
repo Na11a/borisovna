@@ -1,7 +1,7 @@
 import MainLayout from '../Layout/MainLayout'
-import { useCallback, useState } from 'react'
 
-import { Cooperation, Main, OurMission, Purpose, Header } from '..'
+import { Cooperation, Main, OurMission, Purpose, LegislativeBasis, InternationalActivities, Location } from '..'
+import GoodDeeds from '../Blocks/GoogDeeds/GoodDeeds'
 
 interface IPageContainerProps {
   setActiveBlock: React.Dispatch<React.SetStateAction<string>>
@@ -13,9 +13,13 @@ const PageContainer = ({
   <>
     <MainLayout activeBlock={activeBlock}>
       <Main setActiveBlock={setActiveBlock} />
+      <Location setActiveBlock={setActiveBlock} />
       <OurMission setActiveBlock={setActiveBlock} />
       <Purpose setActiveBlock={setActiveBlock} />
+      <GoodDeeds setActiveBlock={setActiveBlock} />
       <Cooperation setActiveBlock={setActiveBlock} />
+      <InternationalActivities setActiveBlock={setActiveBlock} />
+      <LegislativeBasis setActiveBlock={setActiveBlock} />
     </MainLayout>
   </>
 )

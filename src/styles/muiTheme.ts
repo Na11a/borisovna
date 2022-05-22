@@ -51,13 +51,15 @@ const typography: TypographyOptions = {
   },
 
   h6: {
-    fontWeight: 300,
-    fontSize: '1.2rem',
+    fontWeight: 500,
+    fontSize: '14px',
+    lineHeight: '18.2px',
+    fontFamily: 'Roboto',
     [`@media screen and (min-width: ${breakpoints.values?.md}px)`]: {
-      fontSize: "1.4rem",
+      fontSize: "18px",
     },
     [`@media screen and (min-width: ${breakpoints.values?.xl}px)`]: {
-      fontSize: "1.6rem",
+      fontSize: "22px",
     },
   },
 

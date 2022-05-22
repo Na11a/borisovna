@@ -47,7 +47,7 @@ const Header = ({ openMenu }: INavBarProps) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        boxSizing:'border-box',
+        boxSizing: 'border-box',
         position: 'fixed',
         zIndex: 4,
         top: '0',
@@ -55,11 +55,10 @@ const Header = ({ openMenu }: INavBarProps) => {
         height: pxToRem(80),
         backgroundColor: 'white',
         width: '100vw',
-        paddingX:'10%',
-        marginTop:'10px',
+        paddingX: '10%',
         boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
       }}>
-        <Box children="logo" />
+        <Box src="./images/logo.jpg" component={'img'} />
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Box>
             <LanguageSelector />
